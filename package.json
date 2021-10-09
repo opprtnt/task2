@@ -24,6 +24,8 @@
   "dependencies": {
     "-": "0.0.1",
     "D": "^1.0.0",
-    "cross-env": "^7.0.3"
+    "cross-env": "^7.0.3",
+    "inputmask": "^5.0.6",
+    "jquery": "^3.6.0"
   }
 }

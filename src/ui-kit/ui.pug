@@ -3,11 +3,10 @@ html(lang='en')
   head
     title Jade
   body
-    h1 Jade - node template engine
-    #container.col
-      p You are amazing
-      p
-        | Jade is a terse and simple
-        | templating language with a
-        | strong focus on performance
-        | and powerful features.
+    label.label-input(for="drop") Dropdown 
+    input.email-input(type="text" placeholder="Email") 
+    input.email-input-hover(type="text" placeholder="Email") 
+    select#drop.dropdown(name="drop" placeholder="Сколько гостей") 
+      option(value="1") lol
+    input.masked-text-field(type="", name="", placeholder="ДД.ММ.ГГГГ")
+
