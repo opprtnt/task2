@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "cross-env NODE_ENV=development webpack --mode development",
     "build": "cross-env NODE_ENV=production webpack --mode production",
-    "start": "cross-env NODE_ENV=development webpack serve --mode development"
+    "start": "cross-env NODE_ENV=development webpack-dev-server --mode development"
   },
   "author": "Lidia Shananina",
   "license": "ISC",
@@ -14,8 +14,11 @@
     "css-loader": "^6.3.0",
     "html-webpack-plugin": "^5.3.2",
     "mini-css-extract-plugin": "^2.3.0",
+    "node-sass": "^6.0.1",
     "pug": "^3.0.2",
     "pug-loader": "^2.4.0",
+    "sass-loader": "^12.1.0",
+    "scss-loader": "0.0.1",
     "style-loader": "^3.2.1",
     "webpack": "^5.53.0",
     "webpack-cli": "^4.8.0",
@@ -26,6 +29,7 @@
     "D": "^1.0.0",
     "cross-env": "^7.0.3",
     "inputmask": "^5.0.6",
-    "jquery": "^3.6.0"
+    "jquery": "^3.6.0",
+    "uikit": "^3.7.6"
   }
 }

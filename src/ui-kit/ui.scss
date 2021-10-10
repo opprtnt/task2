@@ -1,7 +1,18 @@
+$dark-shade-100: #1f2041;
+$dark-shade-75: rgba(31, 32, 65, 0.75);
+$dark-shade-50: rgba(31, 32, 65, 0.5);
+$dark-shade-25: rgba(31, 32, 65, 0.25);
+$dark-shade-5: rgba(31, 32, 65, 0.05);
+$purple: #bc9cff;
+$green: #6fcf97;
+
 .email-input,
 .dropdown,
-.email-input,
-.masked-text-field {
+.email-input-hover,
+.masked-text-field,
+.date-dropdown,
+.filter-dete-dropdown,
+.expendable-checkbox-list__button {
   padding: 13px 0 13px 15px;
 }
 .email-input,
@@ -9,8 +20,32 @@
   color: $dark-shade-25;
 }
 .email-input-hover,
-.dropdown {
+.dropdown,
+.date-dropdown,
+.filter-dete-dropdown {
   color: $dark-shade-75;
 }
 .dropdown {
+}
+.expendable-checkbox-list__button {
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.expendable-checkbox-list__button {
+  border: none;
+  color: transparent;
+}
+.expendable-checkbox-list__form__input {
+}
+.expendable-checkbox-list__form__item__input {
+  margin-right: 10px;
+}
+.expendable-checkbox-list__form__item__input:checked {
+  background-color: white;
+  border: 1px solid $purple;
+}
+.expendable-checkbox-list__form__item__label {
+  font-size: 14px;
+  color: $dark-shade-50;
 }

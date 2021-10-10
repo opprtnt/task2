@@ -6,7 +6,53 @@ html(lang='en')
     label.label-input(for="drop") Dropdown 
     input.email-input(type="text" placeholder="Email") 
     input.email-input-hover(type="text" placeholder="Email") 
-    select#drop.dropdown(name="drop" placeholder="Сколько гостей") 
+    select#drop.dropdown(name="drop") 
+      option(value="" disabled selected) Сколько гостей
       option(value="1") lol
     input.masked-text-field(type="", name="", placeholder="ДД.ММ.ГГГГ")
-
+    select#date-dropdown.date-dropdown(name="date-drop") 
+      option(value="" disabled selected) ДД.ММ.ГГГГ
+      - var arrDate = ["12.12.1996",'19.28.2019']
+      each val,i in arrDate
+        option(value=i+1)=val
+    select#filter-date-dropdown.filter-dete-dropdown(name="") 
+      - var arrDateFilter = ["19 авг - 23 авг",'24 авг - 26 авг']
+      each val,i in arrDateFilter
+        option(value=i+1)=val
+    select#dropdown-rooms-count-expanded.dropdown-expanded(name="") 
+      option.dropdown-expanded__option(value="") Спальни
+        button.dropdown-rooms-count-expanded__option__button-down
+        span.dropdown-rooms-count-expanded__option__count 0
+        button.dropdown-rooms-count-expanded__option__button-up
+      option(value="") Кровати
+      option(value="") Ванные комнаты
+    .uk-inline
+      button.uk-button.uk-button-default(type='button') click me pls
+      .uk-label(uk-dropdown) ololl
+    .expendable-checkbox-list
+      button.expendable-checkbox-list__button expandable checkbox list
+      form.expendable-checkbox-list__form(action="")
+        .expendable-checkbox-list__form__item
+          input.expendable-checkbox-list__form__item__input(type="checkbox" id="brekfast" name='brekfast')
+          label.expendable-checkbox-list__form__label(for="brekfast") Завтрак
+        .expendable-checkbox-list__form__item
+          input.expendable-checkbox-list__form__item__input(type="checkbox" id="brekfast" name='brekfast')
+          label.expendable-checkbox-list__form__label(for="brekfast") Письменный стол
+        .expendable-checkbox-list__form__item
+          input.expendable-checkbox-list__form__item__input(type="checkbox" id="brekfast" name='brekfast')
+          label.expendable-checkbox-list__form__item__label(for="brekfast") Стул для кормления
+        .expendable-checkbox-list__form__item
+          input.expendable-checkbox-list__form__item__input(type="checkbox" id="brekfast" name='brekfast')
+          label.expendable-checkbox-list__form__item__label(for="brekfast") Кроватка
+        .expendable-checkbox-list__form__item
+          input.expendable-checkbox-list__form__item__input(type="checkbox" id="brekfast" name='brekfast')
+          label.expendable-checkbox-list__form__item__label(for="brekfast") Телевизор
+        .expendable-checkbox-list__form__item
+          input.expendable-checkbox-list__form__item__input(type="checkbox" id="brekfast" name='brekfast')
+          label.expendable-checkbox-list__form__item__label(for="brekfast") Шампунь
+        .expendable-checkbox-list__form__item
+          input.expendable-checkbox-list__form__item__input(type="checkbox" id="brekfast" name='brekfast')
+          label.expendable-checkbox-list__form__item__label(for="brekfast") Телевизор
+        .expendable-checkbox-list__form__item
+          input.expendable-checkbox-list__form__item__input(type="checkbox" id="brekfast" name='brekfast')
+          label.expendable-checkbox-list__form__item__label(for="brekfast") Шампунь

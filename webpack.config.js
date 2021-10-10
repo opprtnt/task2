@@ -20,7 +20,6 @@ module.exports = {
   },
   devServer: {
     historyApiFallback: true,
-    contentBase: path.resolve(__dirname, "dist"),
     open: true,
     compress: true,
     hot: true,
@@ -42,6 +41,10 @@ module.exports = {
       {
         test: /\.pug$/,
         use: ['pug-loader']
+      },
+      {
+        test: /\.s[ac]ss$/,
+        use: [MiniCssExtractPlugin.loader, "css-loader", 'sass-loader'],
       }
     ]
   }

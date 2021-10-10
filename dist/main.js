@@ -19,6 +19,16 @@ eval("/*!\n * dist/inputmask\n * https://github.com/RobinHerbots/Inputmask\n * C
 
 /***/ }),
 
+/***/ "./style.scss":
+/*!********************!*\
+  !*** ./style.scss ***!
+  \********************/
+/***/ (() => {
+
+eval("throw new Error(\"Module build failed (from ../node_modules/mini-css-extract-plugin/dist/loader.js):\\nModuleBuildError: Module build failed (from ../node_modules/sass-loader/dist/cjs.js):\\nSassError: Undefined variable: \\\"$dark-shade-25\\\".\\n        on line 9 of src/ui-kit/ui.scss\\n        from line 1 of src/style.scss\\n>>   color: $dark-shade-25;\\r\\n   ---------^\\n\\n    at processResult (C:\\\\Users\\\\heref\\\\Desktop\\\\2tusk\\\\node_modules\\\\webpack\\\\lib\\\\NormalModule.js:721:19)\\n    at C:\\\\Users\\\\heref\\\\Desktop\\\\2tusk\\\\node_modules\\\\webpack\\\\lib\\\\NormalModule.js:827:5\\n    at C:\\\\Users\\\\heref\\\\Desktop\\\\2tusk\\\\node_modules\\\\loader-runner\\\\lib\\\\LoaderRunner.js:399:11\\n    at C:\\\\Users\\\\heref\\\\Desktop\\\\2tusk\\\\node_modules\\\\loader-runner\\\\lib\\\\LoaderRunner.js:251:18\\n    at context.callback (C:\\\\Users\\\\heref\\\\Desktop\\\\2tusk\\\\node_modules\\\\loader-runner\\\\lib\\\\LoaderRunner.js:124:13)\\n    at Object.callback (C:\\\\Users\\\\heref\\\\Desktop\\\\2tusk\\\\node_modules\\\\sass-loader\\\\dist\\\\index.js:54:7)\\n    at Object.done [as callback] (C:\\\\Users\\\\heref\\\\Desktop\\\\2tusk\\\\node_modules\\\\neo-async\\\\async.js:8069:18)\\n    at options.error (C:\\\\Users\\\\heref\\\\Desktop\\\\2tusk\\\\node_modules\\\\node-sass\\\\lib\\\\index.js:293:32)\");\n\n//# sourceURL=webpack:///./style.scss?");
+
+/***/ }),
+
 /***/ "./style.css":
 /*!*******************!*\
   !*** ./style.css ***!
@@ -37,7 +47,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extr
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./style.css */ \"./style.css\");\n/* harmony import */ var _ui_kit_ui__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./ui-kit/ui */ \"./ui-kit/ui.js\");\n\r\n\r\n\n\n//# sourceURL=webpack:///./index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./style.css */ \"./style.css\");\n/* harmony import */ var _ui_kit_ui__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./ui-kit/ui */ \"./ui-kit/ui.js\");\n/* harmony import */ var _style_scss__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./style.scss */ \"./style.scss\");\n/* harmony import */ var _style_scss__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_style_scss__WEBPACK_IMPORTED_MODULE_2__);\n\r\n\r\n\r\n\n\n//# sourceURL=webpack:///./index.js?");
 
 /***/ }),
 
