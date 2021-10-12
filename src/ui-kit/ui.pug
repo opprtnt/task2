@@ -2,7 +2,8 @@ doctype html
 html(lang='en')
   head
     title Jade
-  body
+    link(href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet")
+  body.ui-body
     label.label-input(for="drop") Dropdown 
     input.email-input(type="text" placeholder="Email") 
     input.email-input-hover(type="text" placeholder="Email") 
@@ -31,28 +32,40 @@ html(lang='en')
       .uk-label(uk-dropdown) ololl
     .expendable-checkbox-list
       button.expendable-checkbox-list__button expandable checkbox list
+        span.expendable-checkbox-list__button__icon.material-icons expand_more
       form.expendable-checkbox-list__form(action="")
-        .expendable-checkbox-list__form__item
-          input.expendable-checkbox-list__form__item__input(type="checkbox" id="brekfast" name='brekfast')
-          label.expendable-checkbox-list__form__label(for="brekfast") Завтрак
-        .expendable-checkbox-list__form__item
-          input.expendable-checkbox-list__form__item__input(type="checkbox" id="brekfast" name='brekfast')
-          label.expendable-checkbox-list__form__label(for="brekfast") Письменный стол
-        .expendable-checkbox-list__form__item
-          input.expendable-checkbox-list__form__item__input(type="checkbox" id="brekfast" name='brekfast')
-          label.expendable-checkbox-list__form__item__label(for="brekfast") Стул для кормления
-        .expendable-checkbox-list__form__item
-          input.expendable-checkbox-list__form__item__input(type="checkbox" id="brekfast" name='brekfast')
-          label.expendable-checkbox-list__form__item__label(for="brekfast") Кроватка
-        .expendable-checkbox-list__form__item
-          input.expendable-checkbox-list__form__item__input(type="checkbox" id="brekfast" name='brekfast')
-          label.expendable-checkbox-list__form__item__label(for="brekfast") Телевизор
-        .expendable-checkbox-list__form__item
-          input.expendable-checkbox-list__form__item__input(type="checkbox" id="brekfast" name='brekfast')
-          label.expendable-checkbox-list__form__item__label(for="brekfast") Шампунь
-        .expendable-checkbox-list__form__item
-          input.expendable-checkbox-list__form__item__input(type="checkbox" id="brekfast" name='brekfast')
-          label.expendable-checkbox-list__form__item__label(for="brekfast") Телевизор
-        .expendable-checkbox-list__form__item
-          input.expendable-checkbox-list__form__item__input(type="checkbox" id="brekfast" name='brekfast')
-          label.expendable-checkbox-list__form__item__label(for="brekfast") Шампунь
+        label(for="one").expendable-checkbox-list__form__item Завтрак
+          input.expendable-checkbox-list__form__item__input(type="checkbox" id="one" name='one' checked="checked")
+          span.expendable-checkbox-list__form__item__custom-checkbox
+        label(for="two").expendable-checkbox-list__form__item Письменный стол
+          input.expendable-checkbox-list__form__item__input(type="checkbox" id="two" name='two')
+          span.expendable-checkbox-list__form__item__custom-checkbox 
+        label(for="three").expendable-checkbox-list__form__item Стул для кормления
+          input.expendable-checkbox-list__form__item__input(type="checkbox" id="three" name='three')
+          span.expendable-checkbox-list__form__item__custom-checkbox
+        label(for="four").expendable-checkbox-list__form__item Кроватка
+          input.expendable-checkbox-list__form__item__input(type="checkbox" id="four" name='four')
+          span.expendable-checkbox-list__form__item__custom-checkbox
+        label(for="five").expendable-checkbox-list__form__item Телевизор
+          input.expendable-checkbox-list__form__item__input(type="checkbox" id="five" name='five')
+          span.expendable-checkbox-list__form__item__custom-checkbox
+        label(for="six").expendable-checkbox-list__form__item Шампунь
+          input.expendable-checkbox-list__form__item__input(type="checkbox" id="six" name='six')
+          span.expendable-checkbox-list__form__item__custom-checkbox
+        label(for="seven").expendable-checkbox-list__form__item Телевизор
+          input.expendable-checkbox-list__form__item__input(type="checkbox" id="seven" name='seven')
+          span.expendable-checkbox-list__form__item__custom-checkbox
+        label(for="eight").expendable-checkbox-list__form__item Шампунь
+          input.expendable-checkbox-list__form__item__input(type="checkbox" id="eight" name='eight')
+          span.expendable-checkbox-list__form__item__custom-checkbox
+    .bage
+      span.bage__icon.material-icons insert_emoticon
+      .bage__info
+        .bage__info__heading Комфорт
+        span.bage__info__body Шумопоглощающие стены
+    .bage
+      span.bage__icon.material-icons location_city
+      .bage__info
+        .bage__info__heading Удобство
+        span.bage__info__body Окно в каждой из спален
+    

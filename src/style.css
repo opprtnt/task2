@@ -1,7 +1,6 @@
+@import "./css/fonts.css";
+@import "~normalize.css";
+
 .label-input {
   background-color: red;
-}
-
-div {
-  color: #78c04f;
 }

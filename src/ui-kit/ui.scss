@@ -6,15 +6,20 @@ $dark-shade-5: rgba(31, 32, 65, 0.05);
 $purple: #bc9cff;
 $green: #6fcf97;
 
+
+.ui-body {
+  margin: 5%;
+}
+
 .email-input,
 .dropdown,
 .email-input-hover,
 .masked-text-field,
 .date-dropdown,
-.filter-dete-dropdown,
-.expendable-checkbox-list__button {
+.filter-dete-dropdown {
   padding: 13px 0 13px 15px;
 }
+
 .email-input,
 .masked-text-field {
   color: $dark-shade-25;
@@ -25,27 +30,98 @@ $green: #6fcf97;
 .filter-dete-dropdown {
   color: $dark-shade-75;
 }
-.dropdown {
+.expendable-checkbox-list__button__icon {
+  color: $dark-shade-50;
+  padding: 10px;
 }
 .expendable-checkbox-list__button {
   font-size: 12px;
   font-weight: 700;
+  padding: 13px 0;
   text-transform: uppercase;
 }
 .expendable-checkbox-list__button {
+  display: flex;
+  align-items: center;
   border: none;
-  color: transparent;
+  background-color: transparent;
+  cursor: pointer;
 }
-.expendable-checkbox-list__form__input {
+.expendable-checkbox-list__form {
+  display: none;
+  .expendable-checkbox-list__form__item {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    line-height: 18px;
+    margin: 0 0 10px;
+    height: 22px;
+    color: $dark-shade-50;
+    position: relative;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    padding-left: 30px;
+    cursor: pointer;
+    .expendable-checkbox-list__form__item__input {
+      position: absolute;
+      opacity: 0;
+      height: 0;
+      width: 0;
+    }
+    .expendable-checkbox-list__form__item__custom-checkbox {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 20px;
+      width: 20px;
+      background-color: white;
+      border: 1px solid $dark-shade-25;
+      border-radius: 4px;
+    }
+    .expendable-checkbox-list__form__item__custom-checkbox:hover,
+    .expendable-checkbox-list__form__item__input:checked ~ .expendable-checkbox-list__form__item__custom-checkbox {
+      border: 1px solid $purple;
+    }
+    .expendable-checkbox-list__form__item__input:checked
+      ~ .expendable-checkbox-list__form__item__custom-checkbox:after {
+      display: block;
+    }
+    .expendable-checkbox-list__form__item__custom-checkbox:after {
+      display: none;
+      content: "";
+      position: absolute;
+      left: 9px;
+      top: 5px;
+      width: 5px;
+      height: 10px;
+      border: solid $purple;
+      border-width: 0 3px 3px 0;
+      -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+      transform: rotate(45deg);
+    }
+  }
 }
-.expendable-checkbox-list__form__item__input {
-  margin-right: 10px;
-}
-.expendable-checkbox-list__form__item__input:checked {
-  background-color: white;
-  border: 1px solid $purple;
-}
-.expendable-checkbox-list__form__item__label {
-  font-size: 14px;
-  color: $dark-shade-50;
+.bage {
+  display: flex;
+  align-items: center;
+  padding: 17px 0;
+  line-height: 24px;
+  border-bottom: 1px #1f20411a solid;
+  width: 280px;
+  color: $dark-shade-75;
+  .bage__icon {
+    font-size: 48px;
+    margin-right: 10px;
+    background: -webkit-linear-gradient(#bc9cff, #8ba4f9);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .bage__info {
+    .bage__info__heading {
+      font-weight: 700;
+    }
+  }
 }
