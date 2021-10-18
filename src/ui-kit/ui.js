@@ -13,5 +13,5 @@ UIkit.notification('Hello world.');
 // );
 $(".expendable-checkbox-list__button").on('click', function () {
   $('.expendable-checkbox-list__form').toggle();
-  ($(".expendable-checkbox-list__button__icon").text() == 'expand_more') ? $(".expendable-checkbox-list__button__icon").text('expand_less') : $(".expendable-checkbox-list__button__icon").text('expand_more');
+  ($(".expendable-checkbox-list__icon").text() == 'expand_more') ? $(".expendable-checkbox-list__icon").text('expand_less') : $(".expendable-checkbox-list__icon").text('expand_more');
 })

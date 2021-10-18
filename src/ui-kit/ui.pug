@@ -30,34 +30,66 @@ html(lang='en')
     .uk-inline
       button.uk-button.uk-button-default(type='button') click me pls
       .uk-label(uk-dropdown) ololl
+    form.form-checkbox(action="")
+        label(for="one1").form-checkbox__item Можно курить
+          input.form-checkbox__input(type="checkbox" id="one1" name='one1' checked="checked")
+          .form-checkbox__custom-checkbox
+            .form-checkbox__check-mark
+              .form-checkbox__check-mark-insert
+        label(for="two1").form-checkbox__item Можно с питомцами
+          input.form-checkbox__input(type="checkbox" id="two1" name='two1')
+          .form-checkbox__custom-checkbox
+            .form-checkbox__check-mark
+              .form-checkbox__check-mark-insert 
+        label(for="three1").form-checkbox__item Можно пригласить гостей (до 10 человек)
+          input.form-checkbox__input(type="checkbox" id="three1" name='three1')
+          .form-checkbox__custom-checkbox
+            .form-checkbox__check-mark
+              .form-checkbox__check-mark-insert
     .expendable-checkbox-list
       button.expendable-checkbox-list__button expandable checkbox list
         span.expendable-checkbox-list__icon.material-icons expand_more
       form.expendable-checkbox-list__form.form-checkbox(action="")
         label(for="one").form-checkbox__item Завтрак
           input.form-checkbox__input(type="checkbox" id="one" name='one' checked="checked")
-          span.form-checkbox__custom-checkbox
+          .form-checkbox__custom-checkbox
+            .form-checkbox__check-mark
+              .form-checkbox__check-mark-insert
         label(for="two").form-checkbox__item Письменный стол
           input.form-checkbox__input(type="checkbox" id="two" name='two')
-          span.form-checkbox__custom-checkbox 
+          .form-checkbox__custom-checkbox
+            .form-checkbox__check-mark
+              .form-checkbox__check-mark-insert 
         label(for="three").form-checkbox__item Стул для кормления
           input.form-checkbox__input(type="checkbox" id="three" name='three')
-          span.form-checkbox__custom-checkbox
+          .form-checkbox__custom-checkbox
+            .form-checkbox__check-mark
+              .form-checkbox__check-mark-insert
         label(for="four").form-checkbox__item Кроватка
           input.form-checkbox__input(type="checkbox" id="four" name='four')
-          span.form-checkbox__custom-checkbox
+          .form-checkbox__custom-checkbox
+            .form-checkbox__check-mark
+              .form-checkbox__check-mark-insert
         label(for="five").form-checkbox__item Телевизор
           input.form-checkbox__input(type="checkbox" id="five" name='five')
-          span.form-checkbox__custom-checkbox
+          .form-checkbox__custom-checkbox
+            .form-checkbox__check-mark
+              .form-checkbox__check-mark-insert
         label(for="six").form-checkbox__item Шампунь
           input.form-checkbox__input(type="checkbox" id="six" name='six')
-          span.form-checkbox__custom-checkbox
+          .form-checkbox__custom-checkbox
+            .form-checkbox__check-mark
+              .form-checkbox__check-mark-insert
         label(for="seven").form-checkbox__item Телевизор
           input.form-checkbox__input(type="checkbox" id="seven" name='seven')
-          span.form-checkbox__custom-checkbox
+          .form-checkbox__custom-checkbox
+            .form-checkbox__check-mark
+              .form-checkbox__check-mark-insert
         label(for="eight").form-checkbox__item Шампунь
           input.form-checkbox__input(type="checkbox" id="eight" name='eight')
-          span.form-checkbox__custom-checkbox
+          .form-checkbox__custom-checkbox
+            .form-checkbox__check-mark
+              .form-checkbox__check-mark-insert
     .bage
       span.bage__icon.material-icons insert_emoticon
       .bage__info
@@ -68,4 +100,32 @@ html(lang='en')
       .bage__info
         .bage__info__heading Удобство
         span.bage__info__body Окно в каждой из спален
-    
+    .radio-buttons
+    label.radio-button(for= 'radio-one') Мужчина
+      input.radio-button__radio(type="radio" id="radio-one" name="radio")
+      .radio-button__custom-radio
+        .radio-button__checkmark
+    label.radio-button(for= 'radio-two') Женщина
+      input.radio-button__radio(type="radio" id="radio-two" name="radio")
+      .radio-button__custom-radio
+        .radio-button__checkmark
+    .togglers
+      label.toggle-button(for="toggle-one" checked="checked") Получать спецпредложения
+        input.toggle-button__input(type="checkbox" id='toggle-one' name="toggle-one")
+        .toggle-button__custom-checkbox
+          .toggle-button__checkmark
+      label.toggle-button(for="toggle-two") Получать спецпредложения
+        input.toggle-button__input(type="checkbox" id='toggle-two' name="toggle-two")
+        .toggle-button__custom-checkbox
+          .toggle-button__checkmark
+    .like-buttons
+      .like-button
+        input.toggle-button__input(type="checkbox" id='like-one' name="like-one")
+        .like-button__custom-like
+          .like-button__icon.material-icons  favorite 
+          span.like-button__count-like 0
+        .like-button
+        input.toggle-button__input(type="checkbox" id='like-one' name="like-one" checked="checked")
+        .like-button__custom-like
+          .like-button__icon.material-icons  favorite 
+          span.like-button__count-like 12
