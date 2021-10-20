@@ -120,12 +120,8 @@ html(lang='en')
           .toggle-button__checkmark
     .like-buttons
       .like-button
-        input.toggle-button__input(type="checkbox" id='like-one' name="like-one")
-        .like-button__custom-like
-          .like-button__icon.material-icons  favorite 
-          span.like-button__count-like 0
-        .like-button
-        input.toggle-button__input(type="checkbox" id='like-one' name="like-one" checked="checked")
-        .like-button__custom-like
-          .like-button__icon.material-icons  favorite 
-          span.like-button__count-like 12
+        .like-button__icon.material-icons  favorite 
+        span.like-button__count-like 0
+      .like-button.like-button_active
+        .like-button__icon.material-icons.like-button__icon_active  favorite 
+        span.like-button__count-like 12

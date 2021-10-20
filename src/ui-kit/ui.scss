@@ -212,36 +212,29 @@ $green: #6fcf97;
 .like-button {
   font-size: 10px !important;
   cursor: pointer;
-  .toggle-button__input {
-    position: absolute;
-    opacity: 0;
-    height: 0;
-    width: 0;
+  display: flex;
+  align-items: center;
+  height: 20px;
+  width: 40px;
+  border: 1px solid $dark-shade-25;
+  border-radius: 10px;
+  color: $dark-shade-25;
+  .like-button__icon {
+    padding: 0 4px;
+    font-size: 10px;
   }
-  .like-button__custom-like {
-    display: flex;
-    align-items: center;
-    height: 20px;
-    width: 40px;
-    border: 1px solid $dark-shade-25;
-    border-radius: 10px;
-    color: $purple;
-    .like-button__icon.material-icons {
-      padding: 0 4px;
-      font-size: 10px;
-      color: $dark-shade-25;
-    }
-    .like-button__count-like {
-      line-height: 12px;
-    }
+  .like-button__count-like {
+    line-height: 12px;
   }
-  .like-button__input:checked ~ .like-button__custom-like .like-button__icon {
+
+  .like-button__icon_active {
     background: -webkit-linear-gradient(#bc9cff, #8ba4f9);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
-  .toggle-button__input:checked ~ .like-button__custom-like,
-  .like-button:hover ~ .like-button__custom-like {
-    border: 1px solid $purple;
-  }
+}
+.like-button:hover,
+.like-button_active {
+  border: 1px solid $purple;
+  color: $purple;
 }

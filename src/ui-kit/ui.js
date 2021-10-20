@@ -12,6 +12,15 @@ UIkit.notification('Hello world.');
 // }
 // );
 $(".expendable-checkbox-list__button").on('click', function () {
-  $('.expendable-checkbox-list__form').toggle();
+  $('.expendable-checkbox-list__form').fadeToggle();
   ($(".expendable-checkbox-list__icon").text() == 'expand_more') ? $(".expendable-checkbox-list__icon").text('expand_less') : $(".expendable-checkbox-list__icon").text('expand_more');
 })
+
+$('.like-button').on('click', function (e) {
+  let currentLike = +($(this).find('.like-button__count-like').text());
+  $(this).hasClass('like-button_active') ? currentLike -= 1 : currentLike += 1;
+  $(this).find('.like-button__count-like').text(currentLike);
+  $(this).toggleClass('like-button_active');
+  $(this).find('.like-button__icon').toggleClass('like-button__icon_active');
+})
+
