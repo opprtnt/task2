@@ -1,5 +1,5 @@
 @import "./css/fonts.css";
-@import "~normalize.css";
+@import "../node_modules/normalize.css/normalize.css";
 
 .label-input {
   background-color: red;

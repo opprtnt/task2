@@ -11,7 +11,12 @@ $green: #6fcf97;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-
+* {
+  box-sizing: border-box;
+}
+button {
+  cursor: pointer;
+}
 .ui-body {
   margin: 5%;
 }
@@ -100,8 +105,7 @@ h3 {
       top: 0;
       left: 0;
       padding: 5px 0;
-      //+5px*2
-      height: 10px;
+      height: 20px;
       width: 20px;
       background-color: white;
       border: 1px solid $dark-shade-25;
@@ -179,7 +183,7 @@ h3 {
       display: none;
       width: 12px;
       height: 12px;
-      margin: 4px;
+      margin: 3px;
       border-radius: 10px;
       background-image: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
     }
@@ -217,7 +221,7 @@ h3 {
     .toggle-button__checkmark {
       width: 12px;
       height: 12px;
-      margin: 4px;
+      margin: 3px;
       border-radius: 10px;
       background-color: $dark-shade-25;
     }
@@ -268,5 +272,66 @@ h3 {
   &__star {
     @include gradient-text;
     cursor: pointer;
+  }
+}
+
+.dropdown-count-guests {
+  position: relative;
+  width: 320px;
+  &__placeholder {
+    padding-left: 15px;
+    width: 320px;
+    border: 1px solid $dark-shade-50;
+    border-radius: 2px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+  }
+  &__icon {
+    padding: 10px;
+  }
+  &__list {
+    padding: 0;
+    margin-bottom: 19px;
+  }
+  &__options {
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 15px;
+    padding: 7px 7px 15px 15px;
+    text-transform: uppercase;
+    color: $dark-shade-100;
+    border: 1px solid $dark-shade-50;
+    border-top: none;
+    box-sizing: border-box;
+    box-shadow: 0px 10px 20px $dark-shade-5;
+  }
+  &__list-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &__enter {
+    color: $purple;
+    text-align: right;
+    cursor: pointer;
+  }
+}
+
+.set-value-button {
+  width: 92px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  &__up,
+  &__down {
+    width: 30px;
+    height: 30px;
+    font-size: 18px;
+    border: 1px solid $dark-shade-25;
+    border-radius: 22px;
+    background-color: white;
+    color: $dark-shade-50;
   }
 }

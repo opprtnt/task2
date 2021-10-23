@@ -49,6 +49,9 @@ $('.rate-button').on({
     if (currentStar.attr('data-checked') === 'false') {
       currentStar.text('star_border');
       currentStar.prevAll().text('star_border');
+    } else {
+      currentStar.text('star');
+      currentStar.prevAll().text('star');
     }
 
   },

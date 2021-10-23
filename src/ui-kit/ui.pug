@@ -130,8 +130,22 @@ html(lang='en')
         span.like-button__count-like 12
     h3.rate-buttons Rate button
     .rate-button
-      .rate-button__star.material-icons(data-checked=false value='1') star_border
-      .rate-button__star.material-icons(data-checked=false value='2') star_border
-      .rate-button__star.material-icons(data-checked=false value='3') star_border
-      .rate-button__star.material-icons(data-checked=false value='4') star_border
-      .rate-button__star.material-icons(data-checked=false value='5') star_border
+      .rate-button__star.material-icons(data-checked='false' value='1') star_border
+      .rate-button__star.material-icons(data-checked='false' value='2') star_border
+      .rate-button__star.material-icons(data-checked='false' value='3') star_border
+      .rate-button__star.material-icons(data-checked='false' value='4') star_border
+      .rate-button__star.material-icons(data-checked='false' value='5') star_border
+    h3 Custom Dropdown
+    .dropdown-count-guests 
+      .dropdown-count-guests__placeholder 
+        span Сколько гостей
+        .dropdown-count-guests__icon.material-icons expand_more
+      .dropdown-count-guests__options
+        ul.dropdown-count-guests__list
+          li.dropdown-count-guests__list-item Взрослые
+            .set-value-button 
+              button.set-value-button__down -
+              span.set-value-button__value 0 
+              button.set-value-button__up +
+        .dropdown-count-guests__enter
+          a Применить
