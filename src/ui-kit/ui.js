@@ -46,16 +46,15 @@ $('.rate-button').on({
   },
   mouseout: function (e) {
     let currentStar = $(e.target);
-    if (currentStar.attr('data-checked') === 'false') {
-      currentStar.text('star_border');
-      currentStar.prevAll().text('star_border');
-    } else {
-      currentStar.text('star');
-      currentStar.prevAll().text('star');
+    for (let v of $(this).children()) {
+      if ($(v).attr('data-checked') === 'false') $(v).text('star_border');
+      else $(v).text('star');
+
     }
 
-  },
 
-}
-)
+
+
+  }
+})
 
