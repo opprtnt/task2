@@ -24,3 +24,35 @@ $('.like-button').on('click', function (e) {
   $(this).find('.like-button__icon').toggleClass('like-button__icon_active');
 })
 
+$('.rate-button').on({
+  click: function (e) {
+    let currentStar = $(e.target);
+    if (currentStar.attr('data-checked') === 'false') {
+      currentStar.text('star').attr('data-checked', true);
+      currentStar.prevAll().text('star').attr('data-checked', true);
+    }
+    else {
+      currentStar.nextAll().text('star_border').attr('data-checked', false)
+    }
+
+  },
+  mouseover: function (e) {
+    let currentStar = $(e.target);
+    if (currentStar.attr('data-checked') === 'false') {
+      currentStar.text('star');
+      currentStar.prevAll().text('star');
+    }
+
+  },
+  mouseout: function (e) {
+    let currentStar = $(e.target);
+    if (currentStar.attr('data-checked') === 'false') {
+      currentStar.text('star_border');
+      currentStar.prevAll().text('star_border');
+    }
+
+  },
+
+}
+)
+

@@ -4,6 +4,9 @@ html(lang='en')
     title Jade
     link(href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet")
   body.ui-body
+    h1 This one is the sub-section or widget title
+    h2 Next one is the item title inside widgets
+    h3 This is a label or CTA text
     label.label-input(for="drop") Dropdown 
     input.email-input(type="text" placeholder="Email") 
     input.email-input-hover(type="text" placeholder="Email") 
@@ -118,10 +121,17 @@ html(lang='en')
         input.toggle-button__input(type="checkbox" id='toggle-two' name="toggle-two")
         .toggle-button__custom-checkbox
           .toggle-button__checkmark
-    .like-buttons
+    h3.like-buttons Like button
       .like-button
         .like-button__icon.material-icons  favorite 
         span.like-button__count-like 0
       .like-button.like-button_active
         .like-button__icon.material-icons.like-button__icon_active  favorite 
         span.like-button__count-like 12
+    h3.rate-buttons Rate button
+    .rate-button
+      .rate-button__star.material-icons(data-checked=false value='1') star_border
+      .rate-button__star.material-icons(data-checked=false value='2') star_border
+      .rate-button__star.material-icons(data-checked=false value='3') star_border
+      .rate-button__star.material-icons(data-checked=false value='4') star_border
+      .rate-button__star.material-icons(data-checked=false value='5') star_border
