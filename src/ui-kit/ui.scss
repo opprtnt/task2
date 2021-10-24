@@ -16,6 +16,7 @@ $green: #6fcf97;
 }
 button {
   cursor: pointer;
+  text-transform: uppercase;
 }
 .ui-body {
   margin: 5%;
@@ -36,6 +37,7 @@ h3 {
   font-size: 12px;
   line-height: 15px;
   text-transform: uppercase;
+  color: $dark-shade-100;
 }
 
 .email-input,
@@ -344,5 +346,72 @@ h3 {
     border: 1px solid $dark-shade-25;
     color: $dark-shade-25;
     cursor: auto;
+  }
+}
+.btn {
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 15px;
+  padding: 15px 20px;
+  margin-right: 20px;
+  border-radius: 22px;
+  border: none;
+}
+
+.btn_primary-gradient,
+.btn_primary-gradient-opacity5,
+.btn_primary-border,
+.btn_primary-border-opacity5,
+.btn-enter {
+  background: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
+  color: white;
+}
+
+.btn_primary-gradient-opacity5 {
+  opacity: 0.5;
+}
+.btn_primary-border,
+.btn_primary-border-opacity5 {
+  padding: 2px;
+  &__inner {
+    background-color: white;
+    padding: 13px;
+    border-radius: 22px;
+    color: $purple;
+  }
+}
+.btn_primary-border-opacity5 {
+  background: linear-gradient(180deg, rgba(187, 156, 255, 0.5) 0%, rgba(139, 164, 249, 0.5) 100%);
+}
+
+.btn-link,
+.btn-link_hover {
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 15px;
+  margin-right: 20px;
+  text-transform: uppercase;
+  color: $purple;
+}
+
+.btn-link_hover {
+  color: $dark-shade-50;
+}
+
+.btn-enter {
+  width: 100%;
+  margin: 20px 0;
+  padding: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  height: 44px;
+  .material-icons {
+    font-size: 24px;
+    padding: 10px;
+    display: inline-block;
+    position: absolute;
+    right: 0;
   }
 }
