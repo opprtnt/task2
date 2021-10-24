@@ -281,6 +281,7 @@ h3 {
   &__placeholder {
     padding-left: 15px;
     width: 320px;
+    line-height: 18px;
     border: 1px solid $dark-shade-50;
     border-radius: 2px;
     display: inline-flex;
@@ -311,11 +312,16 @@ h3 {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    margin-bottom: 7px;
   }
   &__enter {
+    display: flex;
     color: $purple;
-    text-align: right;
-    cursor: pointer;
+    justify-content: space-between;
+
+    & a {
+      cursor: pointer;
+    }
   }
 }
 
@@ -329,9 +335,14 @@ h3 {
     width: 30px;
     height: 30px;
     font-size: 18px;
-    border: 1px solid $dark-shade-25;
+    border: 1px solid $dark-shade-50;
     border-radius: 22px;
     background-color: white;
     color: $dark-shade-50;
+  }
+  .not-active {
+    border: 1px solid $dark-shade-25;
+    color: $dark-shade-25;
+    cursor: auto;
   }
 }

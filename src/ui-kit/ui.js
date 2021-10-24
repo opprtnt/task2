@@ -11,6 +11,13 @@ UIkit.notification('Hello world.');
 //   $(".dropdown-rooms-count-expanded__option__count").text(+countRooms++);
 // }
 // );
+window.onload = function () {
+  let currentLike = $('.set-value-button__value');
+  for (let v of $(currentLike)) {
+    if ($(v).text() == "0") $(v).siblings('.set-value-button__down').addClass('not-active');
+  }
+};
+
 $(".expendable-checkbox-list__button").on('click', function () {
   $('.expendable-checkbox-list__form').fadeToggle();
   ($(".expendable-checkbox-list__icon").text() == 'expand_more') ? $(".expendable-checkbox-list__icon").text('expand_less') : $(".expendable-checkbox-list__icon").text('expand_more');
@@ -45,16 +52,60 @@ $('.rate-button').on({
 
   },
   mouseout: function (e) {
-    let currentStar = $(e.target);
     for (let v of $(this).children()) {
       if ($(v).attr('data-checked') === 'false') $(v).text('star_border');
       else $(v).text('star');
 
     }
 
-
-
-
   }
 })
 
+$('.dropdown-count-guests__options').on({
+
+  click: function (e) {
+    if (e.target.tagName !== 'BUTTON') return;
+    let currentLike = +$(e.target).siblings('span').text();
+    let sumGuests = 0;
+    if ($(e.target).hasClass('set-value-button__up')) $(e.target).siblings('span').text(currentLike + 1);
+    if (currentLike === 0) $(e.target).siblings('.set-value-button__down').toggleClass('not-active');
+    if ($(e.target).hasClass('set-value-button__down')) {
+      if (currentLike < 1) return;
+      $(e.target).siblings('span').text(currentLike - 1);
+      if (currentLike === 1) $(e.target).toggleClass('not-active');
+    }
+
+    for (let v of $(this).find('.set-value-button__value')) {
+      sumGuests += +$(v).text();
+    }
+    showSumGusest(sumGuests, '.dropdown-count__placeholder-text');
+  }
+})
+
+function showSumGusest(sum, elem) {
+  console.log(sum);
+  let innerElem = '';
+  if (sum === 1) innerElem = "1 гость";
+  else if (sum === 2 || sum === 3) innerElem = sum + ' гостя';
+  else innerElem = sum + ' гостей';
+  if (sum === 0) {
+    $(elem).text("Сколько гостей");
+    return;
+  }
+  $('.dropdown-count-guests__clear-button').text('Очистить');
+  $(elem).text(innerElem);
+
+}
+
+$('.dropdown-count-guests__clear-button').on('click', function () {
+  $('.set-value-button__value').text('0');
+  $('.dropdown-count__placeholder-text').text('Сколько гостей');
+  $(this).text('');
+  $('.set-value-button__down').toggleClass('not-active');
+}
+)
+
+$(".dropdown-count-guests__placeholder ").on('click', function () {
+  $('.dropdown-count-guests__options').fadeToggle();
+  ($(".dropdown-count-guests__icon").text() == 'expand_more') ? $(".dropdown-count-guests__icon").text('expand_less') : $(".dropdown-count-guests__icon").text('expand_more');
+})

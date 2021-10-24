@@ -138,14 +138,25 @@ html(lang='en')
     h3 Custom Dropdown
     .dropdown-count-guests 
       .dropdown-count-guests__placeholder 
-        span Сколько гостей
-        .dropdown-count-guests__icon.material-icons expand_more
+        span.dropdown-count__placeholder-text Сколько гостей
+          .material-icons expand_more
       .dropdown-count-guests__options
         ul.dropdown-count-guests__list
           li.dropdown-count-guests__list-item Взрослые
             .set-value-button 
               button.set-value-button__down -
-              span.set-value-button__value 0 
+              span.set-value-button__value 0
+              button.set-value-button__up +
+          li.dropdown-count-guests__list-item Дети
+            .set-value-button 
+              button.set-value-button__down -
+              span.set-value-button__value 0
+              button.set-value-button__up +
+          li.dropdown-count-guests__list-item Младенцы
+            .set-value-button 
+              button.set-value-button__down -
+              span.set-value-button__value 0
               button.set-value-button__up +
         .dropdown-count-guests__enter
+          a.dropdown-count-guests__clear-button
           a Применить
