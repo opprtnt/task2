@@ -31,7 +31,9 @@
     "D": "^1.0.0",
     "inputmask": "^5.0.6",
     "jquery": "^3.6.0",
+    "jquery-ui": "^1.13.0",
     "normalize.css": "^8.0.1",
-    "uikit": "^3.7.6"
+    "uikit": "^3.7.6",
+    "webpack-jquery-ui": "^2.0.1"
   }
 }

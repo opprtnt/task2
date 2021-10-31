@@ -5,6 +5,7 @@ const isDev = process.env.NODE_ENV === 'development';
 const isProd = !isDev;
 
 
+
 const filename = (ext) => isDev ? `[name].${ext}` : `[name].[contenthash].${ext}`;
 
 module.exports = {
@@ -12,6 +13,11 @@ module.exports = {
   mode: 'development',
   entry: {
     main: './index.js',
+  },
+  resolve: {
+    alias: {
+      'jquery': 'jquery/src/jquery'
+    }
   },
   output: {
     filename: `${filename('js')}`,
@@ -30,7 +36,13 @@ module.exports = {
       template: './index.pug',
       inject: true
     }),
-    new MiniCssExtractPlugin({ filename: `${filename('css')}` })
+    new MiniCssExtractPlugin({ filename: `${filename('css')}` }),
+    new webpack.ProvidePlugin({
+      $: "jquery",
+      jQuery: "jquery",
+      "window.jQuery": "jquery'",
+      "window.$": "jquery"
+    })
   ],
   module: {
     rules: [

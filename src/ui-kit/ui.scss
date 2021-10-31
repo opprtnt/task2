@@ -32,7 +32,8 @@ h2 {
   font-size: 19px;
   line-height: 23px;
 }
-h3 {
+h3,
+.range-slider__title {
   font-weight: bold;
   font-size: 12px;
   line-height: 15px;
@@ -150,9 +151,7 @@ h3 {
   .bage__icon {
     font-size: 48px;
     margin-right: 10px;
-    background: -webkit-linear-gradient(#bc9cff, #8ba4f9);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    @include gradient-text;
   }
   .bage__info {
     .bage__info__heading {
@@ -257,9 +256,7 @@ h3 {
   }
 
   .like-button__icon_active {
-    background: -webkit-linear-gradient(#bc9cff, #8ba4f9);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    @include gradient-text;
   }
 }
 .like-button:hover,
@@ -392,6 +389,7 @@ h3 {
   margin-right: 20px;
   text-transform: uppercase;
   color: $purple;
+  cursor: pointer;
 }
 
 .btn-link_hover {
@@ -413,5 +411,46 @@ h3 {
     display: inline-block;
     position: absolute;
     right: 0;
+  }
+}
+
+.range-slider {
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    width: 266px;
+    margin-bottom: 20px;
+  }
+  &__value {
+    display: inline-block;
+    text-align: right;
+    font-size: 12px;
+    line-height: 15px;
+    border: none;
+    color: $dark-shade-50;
+  }
+  h3 {
+    display: inline !important;
+  }
+}
+
+#slider-range {
+  width: 266px;
+  height: 6px;
+  border: 1px solid $dark-shade-25;
+  border-radius: 3px;
+  .ui-slider-handle {
+    width: 16px !important;
+    height: 16px !important;
+    top: -5px;
+  }
+  .ui-state-default {
+    background: linear-gradient(180deg, #6fcf97 0%, #66d2ea 100%);
+    border: 2px solid #ffffff;
+    border-radius: 10px;
+  }
+  .ui-widget-header {
+    background: linear-gradient(180deg, #6fcf97 0%, #66d2ea 100%);
+    border-radius: 3px;
   }
 }

@@ -1,6 +1,8 @@
 import "inputmask";
 import UIkit from 'uikit';
 import $ from "jquery";
+import 'webpack-jquery-ui/slider'
+
 var selector = document.querySelector(".masked-text-field");
 var im = new Inputmask("99-99-9999");
 im.mask(selector);
@@ -109,3 +111,16 @@ $(".dropdown-count-guests__placeholder ").on('click', function () {
   $('.dropdown-count-guests__options').fadeToggle();
   ($(".dropdown-count-guests__icon").text() == 'expand_more') ? $(".dropdown-count-guests__icon").text('expand_less') : $(".dropdown-count-guests__icon").text('expand_more');
 })
+
+$("#slider-range").slider({
+  range: true,
+  min: 0,
+  max: 15000,
+  values: [5000, 10000],
+  slide: function (event, ui) {
+    $(".range-slider__value").val(ui.values[0] + "₽ - " + ui.values[1] + '₽');
+  }
+});
+$(".range-slider__value").val($("#slider-range").slider("values", 0) + '₽' +
+  " - " + $("#slider-range").slider("values", 1) + '₽');
+;
