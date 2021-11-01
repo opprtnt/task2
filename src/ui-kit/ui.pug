@@ -1,5 +1,5 @@
 doctype html
-html(lang='en')
+html(lang='ru')
   head
     title Jade
     link(href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet")
@@ -179,4 +179,17 @@ html(lang='en')
     #slider-range.range-slider__slider
     h3 pagination
     .pagination
-      
+      ul.pagination__list
+        li.pagination__item.pagination_active 
+          a 1
+        li.pagination__item
+          a 2
+        li.pagination__item
+          a 3
+        li.pagination__item
+          a ...
+        li.pagination__item
+          a 15
+        li.pagination__item.pagination__item_last
+          a.material-icons arrow_forward
+      span.pagination 1 – 12 из 100+ вариантов аренды

@@ -1,7 +1,8 @@
 import "inputmask";
 import UIkit from 'uikit';
 import $ from "jquery";
-import 'webpack-jquery-ui/slider'
+import 'webpack-jquery-ui/slider';
+
 
 var selector = document.querySelector(".masked-text-field");
 var im = new Inputmask("99-99-9999");

@@ -11,8 +11,18 @@ $green: #6fcf97;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+@mixin purple-gradient {
+  background: -webkit-linear-gradient(#bc9cff, #8ba4f9);
+}
+@mixin green-gradient {
+  background: linear-gradient(180deg, #6fcf97 0%, #66d2ea 100%);
+}
+
 * {
   box-sizing: border-box;
+}
+a {
+  cursor: pointer;
 }
 button {
   cursor: pointer;
@@ -442,7 +452,7 @@ h3,
   .ui-slider-handle {
     width: 16px !important;
     height: 16px !important;
-    top: -5px;
+    top: -6px;
   }
   .ui-state-default {
     background: linear-gradient(180deg, #6fcf97 0%, #66d2ea 100%);
@@ -452,5 +462,38 @@ h3,
   .ui-widget-header {
     background: linear-gradient(180deg, #6fcf97 0%, #66d2ea 100%);
     border-radius: 3px;
+  }
+}
+
+.pagination {
+  &__list {
+    text-align: center;
+    display: flex;
+    margin-bottom: 10.5px;
+  }
+
+  &__item {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 15px;
+    padding: 12.5px;
+    border-radius: 22px;
+    color: $dark-shade-50;
+
+    &_last {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      @include green-gradient;
+      color: white;
+      padding: 0;
+    }
+  }
+  &_active {
+    color: white;
+    @include purple-gradient;
   }
 }

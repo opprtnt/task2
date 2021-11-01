@@ -1,8 +1,10 @@
+var webpack = require('webpack');
 const path = require('path');
 const HTMLWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const isDev = process.env.NODE_ENV === 'development';
 const isProd = !isDev;
+
 
 
 
@@ -14,11 +16,7 @@ module.exports = {
   entry: {
     main: './index.js',
   },
-  resolve: {
-    alias: {
-      'jquery': 'jquery/src/jquery'
-    }
-  },
+
   output: {
     filename: `${filename('js')}`,
     path: path.resolve(__dirname, 'dist'),
