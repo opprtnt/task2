@@ -7,9 +7,13 @@ html(lang='ru')
     h1 This one is the sub-section or widget title
     h2 Next one is the item title inside widgets
     h3 This is a label or CTA text
-    label.label-input(for="drop") Dropdown 
+    h3 text field
     input.email-input(type="text" placeholder="Email") 
     input.email-input-hover(type="text" placeholder="Email") 
+    h3 subscription text field
+    .subscription-container  
+      input.subscription-container__input(type="text" placeholder='Email')
+      span.subscription-container__icon.material-icons arrow_forward
     select#drop.dropdown(name="drop") 
       option(value="" disabled selected) Сколько гостей
       option(value="1") lol
@@ -135,6 +139,28 @@ html(lang='ru')
       .rate-button__star.material-icons(data-checked='false' value='3') star_border
       .rate-button__star.material-icons(data-checked='false' value='4') star_border
       .rate-button__star.material-icons(data-checked='false' value='5') star_border
+    h3 dropdown 
+    .dropdown-count-guests 
+      .dropdown-count-guests__placeholder 
+        span.dropdown-count__placeholder-text 2 спальни, 2 кровати
+        .dropdown-count-guests__icon.material-icons expand_more
+      .dropdown-count-guests__options
+        ul.dropdown-count-guests__list
+          li.dropdown-count-guests__list-item Спальни
+            .set-value-button 
+              button.set-value-button__down -
+              span.set-value-button__value 0
+              button.set-value-button__up +
+          li.dropdown-count-guests__list-item Кровати
+            .set-value-button 
+              button.set-value-button__down -
+              span.set-value-button__value 0
+              button.set-value-button__up +
+          li.dropdown-count-guests__list-item Ванные комнаты 
+            .set-value-button 
+              button.set-value-button__down -
+              span.set-value-button__value 0
+              button.set-value-button__up +
     h3 Custom Dropdown
     .dropdown-count-guests 
       .dropdown-count-guests__placeholder 
@@ -192,4 +218,42 @@ html(lang='ru')
           a 15
         li.pagination__item.pagination__item_last
           a.material-icons arrow_forward
-      span.pagination 1 – 12 из 100+ вариантов аренды
+      span.pagination__footer 1 – 12 из 100+ вариантов аренды
+    h3 rich checkbox buttons
+    form.rich-checkbox.form-checkbox(action="")
+      .form-checkbox__item
+        label(for="coridor")
+          input.form-checkbox__input(type="checkbox" id="coridor")
+          .form-checkbox__custom-checkbox
+            .form-checkbox__check-mark 
+              .form-checkbox__check-mark-insert
+          .rich-checkbox__text
+            p.rich-checkbox__title Широкий коридор
+            p.rich-checkbox__body Ширина коридоров в номере не менее 91 см.
+      .form-checkbox__item
+        label(for="coridor2")
+          input.form-checkbox__input(type="checkbox" id="coridor2")
+          .form-checkbox__custom-checkbox
+            .form-checkbox__check-mark 
+              .form-checkbox__check-mark-insert
+          .rich-checkbox__text
+            p.rich-checkbox__title Помощник для инвалидов
+            p.rich-checkbox__body На 1 этаже вас встретит специалист  и проводит до номера.   
+    h3 bullet list
+    ul.bullet-list 
+      li.bullet-list__item Нельзя с питомцами 
+      li.bullet-list__item Без вечеринок и мероприятий
+      li.bullet-list__item Время прибытия — после 13:00, а выезд до 12:00 
+    .comment
+      .comment__image-block 
+        img.comment__photo(src="", alt="")
+        .like-button
+          .like-button__icon.material-icons  favorite 
+          span.like-button__count-like 0
+      .comment__body 
+        .comment__title Мурад Сарафанов
+        .comment__subtitle 5 дней назад
+        p.comment__text Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.
+
+
+      
