@@ -9,7 +9,10 @@ html(lang='ru')
     h3 This is a label or CTA text
     h3 text field
     input.email-input(type="text" placeholder="Email") 
-    input.email-input-hover(type="text" placeholder="Email") 
+    input.email-input-hover(type="text" placeholder="Email")
+    h3 date picker 
+    .datepicker-from ДД.ММ.ГГГГ
+      i.datepicker-from__icon.material-icons expand_more
     h3 subscription text field
     .subscription-container  
       input.subscription-container__input(type="text" placeholder='Email')
@@ -34,9 +37,7 @@ html(lang='ru')
         button.dropdown-rooms-count-expanded__option__button-up
       option(value="") Кровати
       option(value="") Ванные комнаты
-    .uk-inline
-      button.uk-button.uk-button-default(type='button') click me pls
-      .uk-label(uk-dropdown) ololl
+    h3 Checkbox Buttons
     form.form-checkbox(action="")
         label(for="one1").form-checkbox__item Можно курить
           input.form-checkbox__input(type="checkbox" id="one1" name='one1' checked="checked")
@@ -140,51 +141,54 @@ html(lang='ru')
       .rate-button__star.material-icons(data-checked='false' value='4') star_border
       .rate-button__star.material-icons(data-checked='false' value='5') star_border
     h3 dropdown 
-    .dropdown-count-guests 
-      .dropdown-count-guests__placeholder 
+    .dropdown-count.bedrooms-count 
+      .dropdown-count__placeholder 
         span.dropdown-count__placeholder-text 2 спальни, 2 кровати
-        .dropdown-count-guests__icon.material-icons expand_more
-      .dropdown-count-guests__options
-        ul.dropdown-count-guests__list
-          li.dropdown-count-guests__list-item Спальни
+        .dropdown-count__icon.material-icons expand_more
+      .dropdown-count__options
+        ul.dropdown-count__list
+          li.dropdown-count__list-item 
+            span.dropdown-count__list-item-title спальни
             .set-value-button 
               button.set-value-button__down -
               span.set-value-button__value 0
               button.set-value-button__up +
-          li.dropdown-count-guests__list-item Кровати
+          li.dropdown-count__list-item 
+            span.dropdown-count__list-item-title кровати
             .set-value-button 
               button.set-value-button__down -
               span.set-value-button__value 0
               button.set-value-button__up +
-          li.dropdown-count-guests__list-item Ванные комнаты 
+          li.dropdown-count__list-item 
+            span.dropdown-count__list-item-title ванные комнаты 
             .set-value-button 
               button.set-value-button__down -
               span.set-value-button__value 0
               button.set-value-button__up +
     h3 Custom Dropdown
-    .dropdown-count-guests 
-      .dropdown-count-guests__placeholder 
+    .dropdown-count 
+      .dropdown-count__placeholder 
         span.dropdown-count__placeholder-text Сколько гостей
-        .dropdown-count-guests__icon.material-icons expand_more
-      .dropdown-count-guests__options
-        ul.dropdown-count-guests__list
-          li.dropdown-count-guests__list-item Взрослые
+        .dropdown-count__icon.material-icons expand_more
+      .dropdown-count__options
+        ul.dropdown-count__list
+          li.dropdown-count__list-item Взрослые
             .set-value-button 
               button.set-value-button__down -
               span.set-value-button__value 0
               button.set-value-button__up +
-          li.dropdown-count-guests__list-item Дети
+          li.dropdown-count__list-item Дети
             .set-value-button 
               button.set-value-button__down -
               span.set-value-button__value 0
               button.set-value-button__up +
-          li.dropdown-count-guests__list-item Младенцы
+          li.dropdown-count__list-item Младенцы
             .set-value-button 
               button.set-value-button__down -
               span.set-value-button__value 0
               button.set-value-button__up +
-        .dropdown-count-guests__enter
-          a.dropdown-count-guests__clear-button
+        .dropdown-count__enter
+          a.dropdown-count__clear-button
           a Применить
     h3 rich Checkbox Buttons
     h3 buttons
@@ -254,6 +258,9 @@ html(lang='ru')
         .comment__title Мурад Сарафанов
         .comment__subtitle 5 дней назад
         p.comment__text Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.
-
+    h3 date picker 
+    label(for="datepicker") anime
+      input(type="text" id='datepicker')
+    
 
       

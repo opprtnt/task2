@@ -2,12 +2,12 @@ import "inputmask";
 import UIkit from 'uikit';
 import $ from "jquery";
 import 'webpack-jquery-ui/slider';
+import 'webpack-jquery-ui/datepicker';
 
 
 var selector = document.querySelector(".masked-text-field");
 var im = new Inputmask("99-99-9999");
 im.mask(selector);
-UIkit.notification('Hello world.');
 
 // $(".dropdown-rooms-count-expanded__button").on('click', function () {
 //   let countRooms = $(".dropdown-rooms-count-expanded__option__count").text();
@@ -64,53 +64,74 @@ $('.rate-button').on({
   }
 })
 
-$('.dropdown-count-guests__options').on({
+$('.dropdown-count').on({
 
   click: function (e) {
-    if (e.target.tagName !== 'BUTTON') return;
-    let currentLike = +$(e.target).siblings('span').text();
-    let sumGuests = 0;
-    if ($(e.target).hasClass('set-value-button__up')) $(e.target).siblings('span').text(currentLike + 1);
-    if (currentLike === 0) $(e.target).siblings('.set-value-button__down').toggleClass('not-active');
-    if ($(e.target).hasClass('set-value-button__down')) {
-      if (currentLike < 1) return;
-      $(e.target).siblings('span').text(currentLike - 1);
-      if (currentLike === 1) $(e.target).toggleClass('not-active');
-    }
 
-    for (let v of $(this).find('.set-value-button__value')) {
-      sumGuests += +$(v).text();
+    if (e.target.className === 'dropdown-count__clear-button') clearCountList(e.target, this);
+    if (e.target.tagName !== 'BUTTON') return;
+
+    let value = +$(e.target).siblings('span').text();
+    let sumGuests = 0;
+
+    if ($(e.target).hasClass('set-value-button__up')) $(e.target).siblings('span').text(value + 1);
+    if (value === 0) $(e.target).siblings('.set-value-button__down').toggleClass('not-active');
+    if ($(e.target).hasClass('set-value-button__down')) {
+      if (value < 1) return;
+      $(e.target).siblings('span').text(value - 1);
+      if (value === 1) $(e.target).toggleClass('not-active');
     }
-    showSumGusest(sumGuests, '.dropdown-count__placeholder-text');
+    if ($(this).hasClass('bedrooms-count')) {
+      showBedrooms(this);
+    }
+    else {
+      for (let v of $(this).find('.set-value-button__value')) {
+        sumGuests += +$(v).text();
+      }
+      showSumGusest(sumGuests, $(this).find('.dropdown-count__placeholder-text'));
+    }
   }
 })
 
+function showBedrooms(dropdown) {
+
+  let placeholderText = '';
+  for (let v of $(dropdown).find('.dropdown-count__list-item-title')) {
+    let countRooms = $(v).siblings('.set-value-button').find('.set-value-button__value').text();
+    if (countRooms !== '0') placeholderText += countRooms + ' ' + $(v).text() + ', ';
+  }
+  $(dropdown).find('.dropdown-count__placeholder-text').text(placeholderText.slice(0, -2));
+}
+
+
 function showSumGusest(sum, elem) {
-  console.log(sum);
+
   let innerElem = '';
   if (sum === 1) innerElem = "1 гость";
-  else if (sum === 2 || sum === 3) innerElem = sum + ' гостя';
+  else if (sum < 5) innerElem = sum + ' гостя';
   else innerElem = sum + ' гостей';
   if (sum === 0) {
     $(elem).text("Сколько гостей");
     return;
   }
-  $('.dropdown-count-guests__clear-button').text('Очистить');
+  $('.dropdown-count__clear-button').text('Очистить');
   $(elem).text(innerElem);
 
 }
 
-$('.dropdown-count-guests__clear-button').on('click', function () {
-  $('.set-value-button__value').text('0');
-  $('.dropdown-count__placeholder-text').text('Сколько гостей');
-  $(this).text('');
-  $('.set-value-button__down').toggleClass('not-active');
-}
-)
+function clearCountList(clearBtn, dropdown) {
 
-$(".dropdown-count-guests__placeholder ").on('click', function () {
-  $('.dropdown-count-guests__options').fadeToggle();
-  ($(".dropdown-count-guests__icon").text() == 'expand_more') ? $(".dropdown-count-guests__icon").text('expand_less') : $(".dropdown-count-guests__icon").text('expand_more');
+  $(dropdown).find('.set-value-button__value').text('0');
+  $(dropdown).find('.dropdown-count__placeholder-text').text('Сколько гостей');
+  $(clearBtn).text('');
+  $(dropdown).find('.set-value-button__down').toggleClass('not-active');
+}
+
+
+$(".dropdown-count__placeholder").on('click', function () {
+  $(this).siblings('.dropdown-count__options').fadeToggle();
+  ($(this).find(".dropdown-count__icon").text() === 'expand_more') ?
+    $(this).find(".dropdown-count__icon").text('expand_less') : $(this).find(".dropdown-count__icon").text('expand_more');
 })
 
 $("#slider-range").slider({
@@ -125,3 +146,11 @@ $("#slider-range").slider({
 $(".range-slider__value").val($("#slider-range").slider("values", 0) + '₽' +
   " - " + $("#slider-range").slider("values", 1) + '₽');
 ;
+
+$(function () {
+  $("#datepicker").datepicker({
+    dateFormat: "dd-mm-yy"
+    , duration: "fast"
+  });
+});
+

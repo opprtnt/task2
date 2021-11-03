@@ -7,15 +7,15 @@ $purple: #bc9cff;
 $green: #6fcf97;
 
 @mixin gradient-text {
-  background: -webkit-linear-gradient(#bc9cff, #8ba4f9);
+  background: -webkit-linear-gradient($purple, #8ba4f9);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 @mixin purple-gradient {
-  background: -webkit-linear-gradient(#bc9cff, #8ba4f9);
+  background: -webkit-linear-gradient($purple, #8ba4f9);
 }
 @mixin green-gradient {
-  background: linear-gradient(180deg, #6fcf97 0%, #66d2ea 100%);
+  background: linear-gradient(180deg, $green 0%, #66d2ea 100%);
 }
 
 * {
@@ -44,6 +44,7 @@ h2 {
 }
 h3,
 .range-slider__title {
+  margin-bottom: 5px;
   font-weight: bold;
   font-size: 12px;
   line-height: 15px;
@@ -56,7 +57,8 @@ h3,
 .email-input-hover,
 .masked-text-field,
 .date-dropdown,
-.filter-date-dropdown {
+.filter-date-dropdown,
+.datepicker-from {
   padding: 13px 0 13px 15px;
   width: 320px;
   border: 1px solid $dark-shade-25;
@@ -117,6 +119,16 @@ h3,
     border: none;
     background-color: transparent;
     cursor: pointer;
+  }
+}
+.datepicker-from {
+  padding: 9px 0 9px 15px;
+  position: relative;
+  &__icon {
+    position: absolute;
+    padding: 10px;
+    right: 0;
+    top: 0;
   }
 }
 
@@ -312,7 +324,7 @@ h3,
   }
 }
 
-.dropdown-count-guests {
+.dropdown-count {
   position: relative;
   width: 320px;
   &__placeholder {
@@ -320,7 +332,8 @@ h3,
     width: 320px;
     line-height: 18px;
     border: 1px solid $dark-shade-50;
-    border-radius: 2px;
+    border-top-left-radius: 2px;
+    border-top-right-radius: 2px;
     display: inline-flex;
     align-items: center;
     justify-content: space-between;
@@ -336,14 +349,16 @@ h3,
   &__options {
     font-weight: bold;
     font-size: 12px;
+    width: 100%;
     line-height: 15px;
     padding: 7px 7px 15px 15px;
     text-transform: uppercase;
     color: $dark-shade-100;
     border: 1px solid $dark-shade-50;
     border-top: none;
-    box-sizing: border-box;
     box-shadow: 0px 10px 20px $dark-shade-5;
+    border-bottom-left-radius: 2px;
+    border-bottom-right-radius: 2px;
   }
   &__list-item {
     display: flex;
@@ -583,5 +598,18 @@ h3,
   }
   .like-button {
     margin: auto;
+  }
+}
+
+.bedrooms-count {
+  width: 266px;
+  .dropdown-count__placeholder {
+    width: 266px;
+  }
+  .dropdown-count__options {
+    padding-bottom: 8px;
+  }
+  .dropdown-count__list {
+    margin: 0;
   }
 }
