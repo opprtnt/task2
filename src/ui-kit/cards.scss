@@ -7,6 +7,10 @@
   border-radius: 4px;
 }
 
+.btn.btn_primary-border {
+  width: 99px;
+}
+
 .datepicker-from {
   width: 50%;
   margin-right: 20px;
@@ -43,6 +47,9 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    span {
+      color: black;
+    }
   }
   .masked-text-field {
     margin-bottom: 20px;
@@ -129,5 +136,22 @@
 
   .dropdown-count {
     margin-bottom: 20.56px;
+  }
+}
+
+.login-block {
+  @include block-style;
+  width: 380px;
+  .btn.btn-enter {
+    margin: 10px 0 30px;
+  }
+  &__create-account-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    span {
+      color: black;
+    }
   }
 }
