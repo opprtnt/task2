@@ -36,6 +36,7 @@ h1 {
   font-weight: bold;
   font-size: 24px;
   line-height: 29px;
+  margin: 0 0 20px 0;
 }
 h2 {
   font-weight: bold;
@@ -44,7 +45,7 @@ h2 {
 }
 h3,
 .range-slider__title {
-  margin-bottom: 5px;
+  margin: 0 0 5px 0;
   font-weight: bold;
   font-size: 12px;
   line-height: 15px;
@@ -52,28 +53,33 @@ h3,
   color: $dark-shade-100;
 }
 
-.email-input,
+.text-input,
 .dropdown,
 .email-input-hover,
 .masked-text-field,
 .date-dropdown,
 .filter-date-dropdown,
-.datepicker-from {
+.datepicker-from__value {
   padding: 13px 0 13px 15px;
+  margin: 0 0 10px 0;
   width: 320px;
   border: 1px solid $dark-shade-25;
   border-radius: 4px;
+  display: block;
+}
+.datepicker-from__value {
+  margin: 0;
 }
 
-.email-input,
-.email-input::placeholder,
+.text-input,
+.text-input::placeholder,
 .masked-text-field::placeholder {
   color: $dark-shade-25;
 }
 
-.email-input:hover,
-.email-input:focus,
-.email-input-hover {
+.text-input:hover,
+.text-input:focus,
+.text-input-hover {
   color: $dark-shade-75;
   border-color: $dark-shade-50;
 }
@@ -122,8 +128,10 @@ h3,
   }
 }
 .datepicker-from {
-  padding: 9px 0 9px 15px;
-  position: relative;
+  &__value {
+    padding: 9px 0 9px 15px;
+    position: relative;
+  }
   &__icon {
     position: absolute;
     padding: 10px;
@@ -213,7 +221,7 @@ h3,
   display: inline-block;
   position: relative;
   padding-left: 30px;
-  margin-right: 20px;
+  margin: 0 20px 20px 0;
   color: $dark-shade-75;
   cursor: pointer;
   .radio-button__radio {
@@ -248,11 +256,12 @@ h3,
   }
 }
 .toggle-button {
-  display: block;
+  display: flex;
+  align-items: center;
   position: relative;
   padding-left: 50px;
   margin-right: 20px;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
   color: $dark-shade-75;
   cursor: pointer;
   .toggle-button__input {
@@ -267,7 +276,6 @@ h3,
     border: 1px solid $dark-shade-25;
     border-radius: 10px;
     position: absolute;
-    top: 0;
     left: 0;
     .toggle-button__checkmark {
       width: 12px;
@@ -347,6 +355,7 @@ h3,
     margin-bottom: 19px;
   }
   &__options {
+    display: none;
     font-weight: bold;
     font-size: 12px;
     width: 100%;
@@ -403,7 +412,6 @@ h3,
   font-weight: 700;
   line-height: 15px;
   padding: 15px 20px;
-  margin-right: 20px;
   border-radius: 22px;
   border: none;
 }
@@ -425,7 +433,7 @@ h3,
   padding: 2px;
   &__inner {
     background-color: white;
-    padding: 13px;
+    padding: 12.5px;
     border-radius: 22px;
     color: $purple;
   }
@@ -451,7 +459,7 @@ h3,
 
 .btn-enter {
   width: 100%;
-  margin: 20px 0;
+  //margin: 20px 0;
   padding: 0;
   display: inline-flex;
   align-items: center;

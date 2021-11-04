@@ -1,0 +1,133 @@
+@import "ui.scss";
+
+@mixin block-style {
+  padding: 40px 30px 30px;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+}
+
+.datepicker-from {
+  width: 50%;
+  margin-right: 20px;
+  &__value {
+    width: auto;
+  }
+}
+
+.find-room-block {
+  width: 380px;
+  @include block-style;
+
+  &__date {
+    display: flex;
+    margin-bottom: 20px;
+    & .datepicker-from:last-child {
+      margin-right: 0;
+    }
+  }
+
+  .dropdown-count {
+    margin-bottom: 31px;
+    &__options {
+      display: none;
+    }
+  }
+}
+
+.registration-form {
+  @include block-style;
+  width: 380px;
+
+  &__login {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .masked-text-field {
+    margin-bottom: 20px;
+  }
+  .btn.btn-enter {
+    margin-bottom: 30px;
+  }
+  .btn.btn_primary-border {
+    width: 99px;
+  }
+}
+
+.booking-block {
+  width: 380px;
+  @include block-style;
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    line-height: 17px;
+    margin-bottom: 20px;
+  }
+  &__room {
+    font-weight: 700;
+  }
+  &__number-room {
+    font-size: 24px;
+    line-height: 30px;
+  }
+  &__type-room {
+    font-size: 12px;
+    line-height: 15px;
+    text-transform: uppercase;
+    color: $purple;
+  }
+  &__price {
+    color: $dark-shade-50;
+  }
+  &__services {
+    margin-bottom: 30px;
+  }
+  &__services-item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    line-height: 24px;
+    color: $dark-shade-75;
+  }
+  &__service-wrapper {
+    width: 239px;
+    display: flex;
+    justify-content: space-between;
+  }
+  &__service-name {
+    margin-right: 5px;
+  }
+  &__service-name-info {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    font-size: 12px;
+    line-height: 14px;
+    text-align: center;
+    padding-top: 2px;
+    border: 1px solid $dark-shade-25;
+    border-radius: 50%;
+    color: $dark-shade-25;
+    cursor: pointer;
+  }
+  &__total-price-block {
+    margin-bottom: 20px;
+    font-size: 19px;
+    line-height: 23px;
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    color: $dark-shade-100;
+  }
+  &__dashed-block {
+    width: 182px;
+    border-bottom: 1px dashed $dark-shade-25;
+  }
+
+  .dropdown-count {
+    margin-bottom: 20.56px;
+  }
+}

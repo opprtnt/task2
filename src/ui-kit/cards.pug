@@ -1,0 +1,128 @@
+.find-room-block
+  h1 Найдём номера под ваши пожелания
+  .find-room-block__date
+    .datepicker-from
+      h3 Прибытие 
+      .datepicker-from__value ДД.ММ.ГГГГ
+        i.datepicker-from__icon.material-icons expand_more
+    .datepicker-from
+      h3 Выезд
+      .datepicker-from__value ДД.ММ.ГГГГ
+        i.datepicker-from__icon.material-icons expand_more
+  h3 гости
+  .dropdown-count 
+      .dropdown-count__placeholder 
+        span.dropdown-count__placeholder-text Сколько гостей
+        .dropdown-count__icon.material-icons expand_more
+      .dropdown-count__options
+        ul.dropdown-count__list
+          li.dropdown-count__list-item Взрослые
+            .set-value-button 
+              button.set-value-button__down -
+              span.set-value-button__value 0
+              button.set-value-button__up +
+          li.dropdown-count__list-item Дети
+            .set-value-button 
+              button.set-value-button__down -
+              span.set-value-button__value 0
+              button.set-value-button__up +
+          li.dropdown-count__list-item Младенцы
+            .set-value-button 
+              button.set-value-button__down -
+              span.set-value-button__value 0
+              button.set-value-button__up +
+        .dropdown-count__enter
+          a.dropdown-count__clear-button
+          a Применить
+  button.btn.btn-enter Подобрать номер
+      span.material-icons arrow_forward
+form.registration-form 
+  h1 Регистрация аккаунта
+  input.text-input(type="text" placeholder="Имя") 
+  input.text-input(type="text" placeholder="Фамилия") 
+  label.radio-button(for= 'man') Мужчина
+      input.radio-button__radio(type="radio" id="man" name="man" checked)
+      .radio-button__custom-radio
+        .radio-button__checkmark
+  label.radio-button(for= 'women') Женщина  
+      input.radio-button__radio(type="radio" id="women" name="women")
+      .radio-button__custom-radio
+        .radio-button__checkmark
+  h3 Дата рождения
+  input.masked-text-field(type="", name="", placeholder="ДД.ММ.ГГГГ")
+  .registration-form__data-login
+    h3 данные для входа в сервис
+    input.text-input(type="text" placeholder="Email") 
+    input.text-input(type="password" placeholder="Пароль") 
+    label.toggle-button(for="toggle-one" checked="checked") Получать спецпредложения
+        input.toggle-button__input(type="checkbox" id='toggle-one' name="toggle-one")
+        .toggle-button__custom-checkbox
+          .toggle-button__checkmark
+  button.btn.btn-enter Перейти к оплате
+      span.material-icons arrow_forward
+  .registration-form__login 
+   span Уже есть аккаунт на Toxin
+   button.btn.btn_primary-border 
+    .btn_primary-border__inner Войти
+.booking-block
+  .booking-block__header 
+    .booking-block__room № 
+      span.booking-block__number-room 888 
+      span.booking-block__type-room люкс
+    .booking-block__price 
+      strong 9 990₽ 
+      | в сутки
+  .find-room-block__date
+    .datepicker-from
+      h3 Прибытие 
+      .datepicker-from__value ДД.ММ.ГГГГ
+        i.datepicker-from__icon.material-icons expand_more
+    .datepicker-from
+      h3 Выезд
+      .datepicker-from__value ДД.ММ.ГГГГ
+        i.datepicker-from__icon.material-icons expand_more
+  h3 гости
+  .dropdown-count 
+      .dropdown-count__placeholder 
+        span.dropdown-count__placeholder-text Сколько гостей
+        .dropdown-count__icon.material-icons expand_more
+      .dropdown-count__options
+        ul.dropdown-count__list
+          li.dropdown-count__list-item Взрослые
+            .set-value-button 
+              button.set-value-button__down -
+              span.set-value-button__value 0
+              button.set-value-button__up +
+          li.dropdown-count__list-item Дети
+            .set-value-button 
+              button.set-value-button__down -
+              span.set-value-button__value 0
+              button.set-value-button__up +
+          li.dropdown-count__list-item Младенцы
+            .set-value-button 
+              button.set-value-button__down -
+              span.set-value-button__value 0
+              button.set-value-button__up +
+        .dropdown-count__enter
+          a.dropdown-count__clear-button
+          a Применить
+  ul.booking-block__services 
+    li.booking-block__services-item
+      .booking-block__service-name 9 990₽ х 4 суток
+      .booking-block__service-price 39 960₽
+    li.booking-block__services-item
+      .booking-block__service-wrapper
+        .booking-block__service-name Сбор за услуги: скидка 2 179₽
+        .booking-block__service-name-info i
+      .booking-block__service-price 0₽
+    li.booking-block__services-item
+      .booking-block__service-wrapper
+        .booking-block__service-name Сбор за дополнительные услуги
+        .booking-block__service-name-info i
+      .booking-block__service-price 300₽
+  .booking-block__total-price-block 
+    .booking-block__total Итого
+    .booking-block__dashed-block
+    .booking-block__total-price 38 081₽
+  button.btn.btn-enter Забронировать
+      span.material-icons arrow_forward
