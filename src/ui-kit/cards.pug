@@ -41,11 +41,11 @@ form.registration-form
   input.text-input(type="text" placeholder="Имя") 
   input.text-input(type="text" placeholder="Фамилия") 
   label.radio-button(for= 'man') Мужчина
-      input.radio-button__radio(type="radio" id="man" name="man" checked)
+      input.radio-button__radio(type="radio" id="man" name="sex" checked)
       .radio-button__custom-radio
         .radio-button__checkmark
   label.radio-button(for= 'women') Женщина  
-      input.radio-button__radio(type="radio" id="women" name="women")
+      input.radio-button__radio(type="radio" id="women" name="sex")
       .radio-button__custom-radio
         .radio-button__checkmark
   h3 Дата рождения
@@ -137,3 +137,46 @@ form.registration-form
       span Нет аккаунта Toxin?
       button.btn.btn_primary-border 
         .btn_primary-border__inner Создать
+.calendar
+  .calendar__mounth-panel 
+    a.calendar__arrow.material-icons arrow_back
+    .calendar__mounth Август 2019
+    a.calendar__arrow.material-icons arrow_forward
+  .calendar__table
+  .calendar__buttons
+    a.calendar__clear-button Очистить
+    a Применить
+.room-card 
+  .room-card__slider.slider
+    .slider__slides
+      img.slider__slide(src="../src/assets/img/image.jpg", alt="")
+      img.slider__slide(src="../src/assets/img/image.jpg", alt="")
+      img.slider__slide(src="../src/assets/img/image.jpg", alt="")
+      img.slider__slide(src="../src/assets/img/image.jpg", alt="")
+    .slider__next-arrow 
+      a.material-icons expand_more
+    .slider__prev-arrow
+      a.material-icons expand_more
+    .slider__dots 
+     .slider__dot.slider__dot_active 
+     .slider__dot 
+     .slider__dot 
+     .slider__dot 
+  .room-card__body 
+    .room-card__info 
+      .room-card__room № 
+        span.room-card__num 888
+        span.room-card__lux люкс
+      .room-card__price 
+        strong 9 990₽ 
+        | в сутки
+    .room-card__rate   
+      .rate-button
+        .rate-button__star.material-icons(data-checked='false' value='1') star_border
+        .rate-button__star.material-icons(data-checked='false' value='2') star_border
+        .rate-button__star.material-icons(data-checked='false' value='3') star_border
+        .rate-button__star.material-icons(data-checked='false' value='4') star_border
+        .rate-button__star.material-icons(data-checked='false' value='5') star_border
+      .room-card__feedback
+        strong 145 
+        | Отзывов
