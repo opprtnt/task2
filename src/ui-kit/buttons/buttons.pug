@@ -1,0 +1,46 @@
+mixin btn_primary-border(value)
+     button.btn.btn_primary-border
+          .btn_primary-border__inner= value
+
+mixin btn_primary-gradient(value)
+     button.btn.btn_primary-gradient= value
+
+mixin btn_primary-gradient-opacity5(value)
+     button.btn.btn_primary-gradient-opacity5= value 
+
+mixin btn_primary-border-opacity5(value)
+     button.btn.btn_primary-border-opacity5
+     .btn_primary-border-opacity5__inner= value
+
+mixin btn-link(value)
+     a.btn-link= value
+
+mixin btn-enter(value)
+     button.btn.btn-enter= value
+          span.material-icons arrow_forward
+
+mixin radio-button(value, name, checked) 
+     label.radio-button= value
+          input.radio-button__radio(type="radio" name=name checked=checked)
+          .radio-button__custom-radio
+               .radio-button__checkmark
+
+mixin toggle-button(value,name,checked)
+     label.toggle-button(checked=checked)= value
+          input.toggle-button__input(type="checkbox" name=name)
+          .toggle-button__custom-checkbox
+               .toggle-button__checkmark
+
+mixin like-button(value) 
+     .like-button(class=attributes.class)
+          .like-button__icon.material-icons  favorite 
+          span.like-button__count-like= value
+
+mixin rate-button(value)
+     - var count = value;
+     .rate-button
+          - for(let i = 0; i<5; i++)
+               if (i<count) 
+                    .rate-button__star.material-icons(data-checked='true' value=i+1) star
+               else 
+                    .rate-button__star.material-icons(data-checked='false' value=i+1) star_border
