@@ -1,0 +1,26 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(http-equiv="X-UA-Compatible", content="IE=edge")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    title Document
+  body 
+    include /../ui-kit/inputs/input.pug
+    include /../ui-kit/header/header/header.pug
+    .container
+      .find-room-filter 
+        +date-dropdown
+        +dropdown-count
+        +range-slider('диапазон цены')
+        +form-checkbox('правила дома')
+        +rich-checkbox('доступность')
+        +dropdown-rooms('удобства номера')
+        +expandable-list('дополнительные удобства')
+      .find-rooms-list
+        h1 Номера, которые мы для вас подобрали
+        .find-rooms-list__cards
+          -for (let i=0; i<12; i++)
+            include ../ui-kit/slider/slider.pug
+        include ../ui-kit/pagination/pagination.pug
+    include ../ui-kit/footer/footer.pug

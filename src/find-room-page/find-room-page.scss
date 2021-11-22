@@ -1,0 +1,31 @@
+.dropdown-count {
+  width: 266px;
+  &__placeholder {
+    width: 100%;
+  }
+}
+.container {
+  display: flex;
+  padding-top: 30px;
+  margin-bottom: 70px;
+}
+.find-room-filter {
+  width: 266px;
+  margin-right: 60px;
+}
+.find-rooms-list {
+  &__cards {
+    display: flex;
+    flex: 0 0 32%;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .pagination {
+    margin: 41px auto;
+    text-align: center;
+
+    &__list {
+      justify-content: center;
+    }
+  }
+}
