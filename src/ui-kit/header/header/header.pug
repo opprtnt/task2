@@ -1,0 +1,22 @@
+
+.header
+  .container
+    .header__logo 
+      include ../../../assets/img/toxin.svg
+    .header__nav 
+      ul.header__menu
+        li.header__menu-item.header__menu-item_active
+          a О нас
+        li.header__menu-item
+          a Услуги 
+            .material-icons expand_more
+        li.header__menu-item
+          a Вакансии
+        li.header__menu-item
+          a Новости
+        li.header__menu-item
+          a Соглашения
+            .material-icons expand_more
+      .header__login
+        +btn_primary-border('Войти')
+        +btn_primary-gradient('Зарегистрироваться')
