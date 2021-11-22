@@ -1,0 +1,8 @@
+.find-room-block
+  h1 Найдём номера под ваши пожелания
+  .find-room-block__date
+    +date-picker('Прибытие')
+    +date-picker('Выезд')
+    include ../calendar/calendar.pug
+  +dropdown-count
+  +btn-enter('Подобрать номер')
