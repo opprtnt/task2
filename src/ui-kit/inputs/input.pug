@@ -1,0 +1,170 @@
+mixin date-picker(value)
+  .datepicker-from
+      h3= value 
+      .datepicker-from__value ДД.ММ.ГГГГ
+        i.datepicker-from__icon.material-icons expand_more
+
+mixin masked-text-field
+  input.masked-text-field(type="", name="", placeholder="ДД.ММ.ГГГГ")
+
+mixin date-dropdown
+  .filter-date-dropdown
+    h3 даты пребывания в отеле
+    .filter-date-dropdown__placeholder 
+          span.filter-date-dropdown__placeholder-text 19 авг - 23 авг
+          .filter-date-dropdown__icon.material-icons expand_more
+
+mixin dropdown-placeholder(value)
+  .dropdown-count__placeholder 
+        span.dropdown-count__placeholder-text= value
+        .dropdown-count__icon.material-icons expand_more
+
+mixin dropdown-count
+  .dropdown-count 
+      h3 гости
+      +dropdown-placeholder('Сколько гостей')
+      .dropdown-count__options
+        ul.dropdown-count__list
+          li.dropdown-count__list-item Взрослые
+            .set-value-button 
+              button.set-value-button__down -
+              span.set-value-button__value 0
+              button.set-value-button__up +
+          li.dropdown-count__list-item Дети
+            .set-value-button 
+              button.set-value-button__down -
+              span.set-value-button__value 0
+              button.set-value-button__up +
+          li.dropdown-count__list-item Младенцы
+            .set-value-button 
+              button.set-value-button__down -
+              span.set-value-button__value 0
+              button.set-value-button__up +
+        .dropdown-count__enter
+          a.dropdown-count__clear-button
+          a Применить
+
+mixin subscription-input 
+  .subscription-container
+    input.subscription-container__input(type="text" placeholder='Email')
+    span.subscription-container__icon.material-icons arrow_forward
+
+mixin range-slider(header)
+  form.range-slider(action="")
+    .range-slider__wrapper
+        h3= header
+        input.range-slider__value(type="text" id="myRange" readonly value="5 000₽ - 10 000₽")
+    #slider-range.range-slider__slider
+    p.find-room-filter__range-slider-text Стоимость за сутки пребывания в номере
+
+mixin form-checkbox(header)
+  form.form-checkbox(action="")
+    h3= header
+    label.form-checkbox__item Можно курить
+      input.form-checkbox__input(type="checkbox" name='one1' checked="checked")
+      .form-checkbox__custom-checkbox
+        .form-checkbox__check-mark
+          .form-checkbox__check-mark-insert
+    label.form-checkbox__item Можно с питомцами
+      input.form-checkbox__input(type="checkbox" name='two1')
+      .form-checkbox__custom-checkbox
+        .form-checkbox__check-mark
+          .form-checkbox__check-mark-insert 
+    label.form-checkbox__item Можно пригласить гостей (до 10 человек)
+      input.form-checkbox__input(type="checkbox" name='three1')
+      .form-checkbox__custom-checkbox
+        .form-checkbox__check-mark
+          .form-checkbox__check-mark-insert
+
+mixin rich-checkbox(header)
+    form.rich-checkbox.form-checkbox(action="")
+      h3= header
+      label.form-checkbox__item
+        input.form-checkbox__input(type="checkbox")
+        .form-checkbox__custom-checkbox
+          .form-checkbox__check-mark 
+            .form-checkbox__check-mark-insert
+        .rich-checkbox__text
+          p.rich-checkbox__title Широкий коридор
+          p.rich-checkbox__body Ширина коридоров в номере не менее 91 см.
+      label.form-checkbox__item
+        input.form-checkbox__input(type="checkbox")
+        .form-checkbox__custom-checkbox
+          .form-checkbox__check-mark 
+            .form-checkbox__check-mark-insert
+        .rich-checkbox__text
+          p.rich-checkbox__title Помощник для инвалидов
+          p.rich-checkbox__body На 1 этаже вас встретит специалист  и проводит до номера.
+
+mixin dropdown-rooms(header)
+    .dropdown-count.bedrooms-count
+      h3= header  
+      .dropdown-count__placeholder 
+        span.dropdown-count__placeholder-text 2 спальни, 2 кровати
+        .dropdown-count__icon.material-icons expand_more
+      .dropdown-count__options
+        ul.dropdown-count__list
+          li.dropdown-count__list-item 
+            span.dropdown-count__list-item-title спальни
+            .set-value-button 
+              button.set-value-button__down -
+              span.set-value-button__value 0
+              button.set-value-button__up +
+          li.dropdown-count__list-item 
+            span.dropdown-count__list-item-title кровати
+            .set-value-button 
+              button.set-value-button__down -
+              span.set-value-button__value 0
+              button.set-value-button__up +
+          li.dropdown-count__list-item 
+            span.dropdown-count__list-item-title ванные комнаты 
+            .set-value-button 
+              button.set-value-button__down -
+              span.set-value-button__value 0
+              button.set-value-button__up +
+
+mixin expandable-list(header) 
+  .expendable-checkbox-list
+      button.expendable-checkbox-list__button= header
+        span.expendable-checkbox-list__icon.material-icons expand_more
+      form.expendable-checkbox-list__form.form-checkbox(action="")
+        label(for="one").form-checkbox__item Завтрак
+          input.form-checkbox__input(type="checkbox" id="one" name='one' checked="checked")
+          .form-checkbox__custom-checkbox
+            .form-checkbox__check-mark
+              .form-checkbox__check-mark-insert
+        label(for="two").form-checkbox__item Письменный стол
+          input.form-checkbox__input(type="checkbox" id="two" name='two')
+          .form-checkbox__custom-checkbox
+            .form-checkbox__check-mark
+              .form-checkbox__check-mark-insert 
+        label(for="three").form-checkbox__item Стул для кормления
+          input.form-checkbox__input(type="checkbox" id="three" name='three')
+          .form-checkbox__custom-checkbox
+            .form-checkbox__check-mark
+              .form-checkbox__check-mark-insert
+        label(for="four").form-checkbox__item Кроватка
+          input.form-checkbox__input(type="checkbox" id="four" name='four')
+          .form-checkbox__custom-checkbox
+            .form-checkbox__check-mark
+              .form-checkbox__check-mark-insert
+        label(for="five").form-checkbox__item Телевизор
+          input.form-checkbox__input(type="checkbox" id="five" name='five')
+          .form-checkbox__custom-checkbox
+            .form-checkbox__check-mark
+              .form-checkbox__check-mark-insert
+        label(for="six").form-checkbox__item Шампунь
+          input.form-checkbox__input(type="checkbox" id="six" name='six')
+          .form-checkbox__custom-checkbox
+            .form-checkbox__check-mark
+              .form-checkbox__check-mark-insert
+        label(for="seven").form-checkbox__item Телевизор
+          input.form-checkbox__input(type="checkbox" id="seven" name='seven')
+          .form-checkbox__custom-checkbox
+            .form-checkbox__check-mark
+              .form-checkbox__check-mark-insert
+        label(for="eight").form-checkbox__item Шампунь
+          input.form-checkbox__input(type="checkbox" id="eight" name='eight')
+          .form-checkbox__custom-checkbox
+            .form-checkbox__check-mark
+              .form-checkbox__check-mark-insert

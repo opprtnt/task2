@@ -1,0 +1,75 @@
+.calendar {
+  width: 320px;
+  padding: 20px;
+  border: 1px solid $dark-shade-25;
+  box-shadow: 0px 10px 20px $dark-shade-5;
+  border-radius: 4px;
+  background-color: white;
+
+  &__day {
+    &_selected {
+      @include purple-gradient;
+      font-weight: 700;
+      color: white;
+      border-radius: 22px;
+    }
+  }
+  &__mounth-panel {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+  }
+  &__arrow {
+    color: $purple;
+  }
+  &__mounth {
+    font-size: 19px;
+    font-weight: 700;
+    color: $dark-shade-100;
+  }
+  &__table-days {
+    font-size: 12px;
+    font-weight: 700;
+    color: $purple;
+  }
+  &__table {
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 12px;
+    color: $dark-shade-50;
+    table {
+      border-spacing: 0;
+    }
+    td {
+      cursor: pointer;
+    }
+    td,
+    th {
+      width: 40px;
+      height: 40px;
+    }
+    td:hover {
+      @include green-gradient;
+      font-weight: 700;
+      color: white;
+      border-radius: 22px;
+    }
+    &-disabled-days {
+      color: $dark-shade-25;
+    }
+    &_enter {
+      background: linear-gradient(180deg, rgba(188, 156, 255, 0.25) 0%, rgba(139, 164, 249, 0.25) 100%);
+      color: $dark-shade-50;
+    }
+  }
+
+  &__buttons {
+    display: flex;
+    justify-content: space-between;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 15px;
+    color: $purple;
+  }
+}

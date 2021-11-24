@@ -1,6 +1,7 @@
 .footer {
   width: 100%;
   margin: 0;
+  box-shadow: inset 0px 1px 0px rgba(31, 32, 65, 0.1);
   .container {
     display: flex;
   }
@@ -24,6 +25,7 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
+      padding: 0;
     }
   }
   &__logo-col {

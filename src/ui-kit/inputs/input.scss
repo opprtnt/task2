@@ -1,0 +1,311 @@
+.text-input,
+.dropdown,
+.email-input-hover,
+.masked-text-field,
+.date-dropdown,
+.datepicker-from__value {
+  padding: 13px 0 13px 15px;
+  margin: 0 0 10px 0;
+  width: 320px;
+  border: 1px solid $dark-shade-25;
+  border-radius: 4px;
+  display: block;
+}
+.datepicker-from__value {
+  margin: 0;
+}
+
+.text-input,
+.text-input::placeholder,
+.masked-text-field::placeholder {
+  color: $dark-shade-25;
+}
+
+.text-input:hover,
+.text-input:focus,
+.text-input-hover {
+  color: $dark-shade-75;
+  border-color: $dark-shade-50;
+}
+
+.email-input-hover,
+.dropdown,
+.date-dropdown,
+.filter-dete-dropdown {
+  color: $dark-shade-75;
+}
+.subscription-container {
+  position: relative;
+  width: 100%;
+  &__input {
+    width: 100%;
+    padding: 13px 0 13px 15px;
+    border: 1px solid $dark-shade-25;
+    border-radius: 4px;
+  }
+  &__icon {
+    position: absolute;
+    padding: 10px;
+    right: 0;
+    @include gradient-text;
+  }
+}
+
+.datepicker-from {
+  cursor: pointer;
+  width: 50%;
+  margin-right: 20px;
+  &__value {
+    padding: 9px 0 9px 15px;
+    position: relative;
+    width: auto;
+  }
+  &__icon {
+    position: absolute;
+    padding: 10px;
+    right: 0;
+    top: 0;
+  }
+  &:nth-last-child(2) {
+    margin-right: 0;
+  }
+}
+.range-slider {
+  margin-bottom: 30px;
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    width: 266px;
+    margin-bottom: 20px;
+  }
+  &__value {
+    display: inline-block;
+    text-align: right;
+    font-size: 12px;
+    line-height: 15px;
+    border: none;
+    color: $dark-shade-50;
+  }
+  h3 {
+    display: inline !important;
+    margin: 0;
+  }
+}
+.find-room-filter__range-slider-text {
+  font-size: 12px;
+  line-height: 14px;
+  color: $dark-shade-50;
+}
+
+#slider-range {
+  width: 266px;
+  height: 6px;
+  margin-bottom: 13.56px;
+  border: 1px solid $dark-shade-25;
+  border-radius: 3px;
+  .ui-slider-handle {
+    width: 16px !important;
+    height: 16px !important;
+    top: -6px;
+  }
+  .ui-state-default {
+    background: linear-gradient(180deg, #6fcf97 0%, #66d2ea 100%);
+    border: 2px solid #ffffff;
+    border-radius: 10px;
+  }
+  .ui-widget-header {
+    background: linear-gradient(180deg, #6fcf97 0%, #66d2ea 100%);
+    border-radius: 3px;
+  }
+}
+
+.form-checkbox {
+  margin-bottom: 30px;
+  h3 {
+    margin-bottom: 16px;
+  }
+  .form-checkbox__item {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    line-height: 18px;
+    margin: 0 0 10px;
+    color: $dark-shade-50;
+    position: relative;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    padding-left: 30px;
+    cursor: pointer;
+    .form-checkbox__input {
+      position: absolute;
+      opacity: 0;
+      height: 0;
+      width: 0;
+    }
+    .form-checkbox__custom-checkbox {
+      position: absolute;
+      top: 0;
+      left: 0;
+      padding: 5px 0;
+      height: 20px;
+      width: 20px;
+      background-color: white;
+      border: 1px solid $dark-shade-25;
+      border-radius: 4px;
+    }
+    .form-checkbox__custom-checkbox:hover,
+    .form-checkbox__input:checked ~ .form-checkbox__custom-checkbox {
+      border: 1px solid $purple;
+    }
+    .form-checkbox__input:checked ~ .form-checkbox__custom-checkbox .form-checkbox__check-mark {
+      display: block;
+    }
+    .form-checkbox__check-mark {
+      display: none;
+      position: relative;
+      height: 8px;
+      width: 6px;
+      margin: auto;
+      background-image: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
+      -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+      transform: rotate(45deg);
+      .form-checkbox__check-mark-insert {
+        height: 6px;
+        width: 4px;
+        background-color: white;
+        transform: translateY(-0.5px) translateX(-0.5px);
+      }
+    }
+  }
+}
+.filter-date-dropdown {
+  position: relative;
+  width: 266px;
+  margin-bottom: 30px;
+  h3 {
+    margin-bottom: 5px;
+  }
+  &__placeholder {
+    padding-left: 15px;
+    width: 100%;
+    line-height: 18px;
+    border: 1px solid $dark-shade-50;
+    border-top-left-radius: 2px;
+    border-top-right-radius: 2px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+  }
+  &__icon {
+    padding: 10px;
+  }
+}
+.dropdown-count {
+  position: relative;
+  width: 320px;
+  margin-bottom: 30px;
+  h3 {
+    margin-bottom: 5px;
+  }
+  &__placeholder {
+    padding-left: 15px;
+    width: 320px;
+    line-height: 18px;
+    border: 1px solid $dark-shade-50;
+    border-top-left-radius: 2px;
+    border-top-right-radius: 2px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+  }
+  &__icon {
+    padding: 10px;
+  }
+  &__list {
+    padding: 0;
+    margin-bottom: 19px;
+  }
+  &__options {
+    display: none;
+    position: absolute;
+    z-index: 9999;
+    font-weight: bold;
+    font-size: 12px;
+    width: 100%;
+    line-height: 15px;
+    padding: 7px 7px 15px 15px;
+    text-transform: uppercase;
+    color: $dark-shade-100;
+    border: 1px solid $dark-shade-50;
+    border-top: none;
+    box-shadow: 0px 10px 20px $dark-shade-5;
+    border-bottom-left-radius: 2px;
+    border-bottom-right-radius: 2px;
+    background-color: #ffffff;
+  }
+  &__list-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 7px;
+  }
+  &__enter {
+    display: flex;
+    color: $purple;
+    justify-content: space-between;
+
+    & a {
+      cursor: pointer;
+    }
+  }
+}
+
+.set-value-button {
+  width: 92px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  &__up,
+  &__down {
+    width: 30px;
+    height: 30px;
+    font-size: 18px;
+    border: 1px solid $dark-shade-50;
+    border-radius: 22px;
+    background-color: white;
+    color: $dark-shade-50;
+  }
+  .not-active {
+    border: 1px solid $dark-shade-25;
+    color: $dark-shade-25;
+    cursor: auto;
+  }
+}
+.expendable-checkbox-list {
+  .form-checkbox {
+    display: none;
+  }
+  &__icon {
+    color: $dark-shade-50;
+    padding: 10px;
+  }
+  &__button {
+    margin-right: 16px;
+    padding: 0;
+    width: 266px;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+  }
+}

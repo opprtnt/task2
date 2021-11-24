@@ -1,0 +1,31 @@
+.booking-block
+  .booking-block__header 
+    .booking-block__room № 
+      span.booking-block__number-room 888 
+      span.booking-block__type-room люкс
+    .booking-block__price 
+      strong 9 990₽ 
+      | в сутки
+  .find-room-block__date
+    +date-picker('Прибытие')
+    +date-picker('Выезд')
+  +dropdown-count 
+  ul.booking-block__services 
+    li.booking-block__services-item
+      .booking-block__service-name 9 990₽ х 4 суток
+      .booking-block__service-price 39 960₽
+    li.booking-block__services-item
+      .booking-block__service-wrapper
+        .booking-block__service-name Сбор за услуги: скидка 2 179₽
+        .booking-block__service-name-info i
+      .booking-block__service-price 0₽
+    li.booking-block__services-item
+      .booking-block__service-wrapper
+        .booking-block__service-name Сбор за дополнительные услуги
+        .booking-block__service-name-info i
+      .booking-block__service-price 300₽
+  .booking-block__total-price-block 
+    .booking-block__total Итого
+    .booking-block__dashed-block
+    .booking-block__total-price 38 081₽
+  +btn-enter('Забронировать')

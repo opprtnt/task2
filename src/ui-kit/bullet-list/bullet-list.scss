@@ -1,0 +1,15 @@
+.bullet-list {
+  &__item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    &::before {
+      content: "\2022";
+      color: $dark-shade-25;
+      font-size: 30px;
+      line-height: 10px;
+      font-weight: bold;
+      margin-right: 10px;
+    }
+  }
+}
