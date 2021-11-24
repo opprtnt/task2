@@ -1,0 +1,67 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(http-equiv="X-UA-Compatible", content="IE=edge")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    title Document
+  body 
+    include ../ui-kit/header/header/header.pug
+    .room-page
+      .room-page__img-block
+        img(src=require('./assets/img/image1.jpg'))
+        .room-page__img-side
+          img(src=require('./assets/img/image2.jpg'))
+          img(src=require('./assets/img/image3.jpg'))
+      .container
+        .room-page__widgets
+          .room-page__row  
+            .room-page__bages 
+              include ../ui-kit/bage/bage.pug
+              h3 Сведения о номере
+              +bage('insert_emoticon', 'Комфорт', 'Шумопоглощающие стены')
+              +bage('location_city', 'Удобство', 'Окно в каждой из спален')
+              +bage('whatshot', 'Уют', 'Номер оснащен камином')
+            .room-page__impressions-block
+              h3 Впечатления от номера
+              .room-page__row
+                .room-page__diagram-container
+                  .room-page__diagram-bg 
+                  .room-page__diagram-part.room-page__diagram-part_1
+                    .room-page__pie
+                  .room-page__diagram-part.room-page__diagram-part_2
+                    .room-page__pie
+                  .room-page__diagram-part.room-page__diagram-part_3
+                    .room-page__pie
+                  .room-page__diagram-inner
+                    .room-page__diagram-inner-content
+                      p 
+                        p.room-page__big-num 260
+                        |голосов
+                ul.room-page__diagram-legend 
+                  li.room-page__diagram-legend-item.room-page__diagram-legend-item_1 Великолепно
+                  li.room-page__diagram-legend-item.room-page__diagram-legend-item_2 Хорошо
+                  li.room-page__diagram-legend-item.room-page__diagram-legend-item_3 Удовлетварительно
+                  li.room-page__diagram-legend-item.room-page__diagram-legend-item_4 Разачарован
+          .room-page__feedback
+            .room-page__row
+              h3 Отзывы посетителей номера
+              span.room-page__count-comments 2 отзыва 
+            include ../ui-kit/feedback-block/feedback-block.pug
+            -let text = 'Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.'
+            +feedback('Мурат Сарафанов', '5 дней назад', text,12)
+            -text = 'Обслуживание на высоте! Всё аккуратно, чисто. Завтраки в номер советую заказать, каждый день новое блюдо и десерт как комплимент'
+            +feedback('Патрисия Стеклышкова', 'неделю назад', text, 2)
+          .room-page__row-2
+            .room-page__rules 
+              h3 Правила
+              include ../ui-kit/bullet-list/bullet-list.pug
+              +bullet-list(['Нельзя с питомцами', 'Без вечеринок и мероприятий', 'Время прибытия — после 13:00, а выезд до 12:00'])
+            .room-page__cancel-info
+              h3 Отмена
+              p.room-page__cansel-info-text Бесплатная отмена в течение 48 ч. После этого при отмене не позднее чем за 5 дн. до 
+              | прибытия вы получите полный возврат за вычетом сбора за услуги.
+        .room-page__reservation-card
+          include ../ui-kit/booking-block/booking-block.pug
+
+      
