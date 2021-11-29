@@ -1,9 +1,53 @@
+@import "./css/fonts.css";
+@import "../node_modules/normalize.css/normalize.css";
 @import "ui-kit/ui.scss";
+@import "ui-kit/logo.scss";
+@import "ui-kit/header/header/header.scss";
+@import "ui-kit/header/header-login/header-login.scss";
+@import "ui-kit/footer/footer.scss";
+@import "ui-kit/slider/slider.scss";
+@import "ui-kit/find-room-block/find-room-block.scss";
+@import "ui-kit/buttons/buttons.scss";
+@import "ui-kit/calendar/calendar.scss";
+@import "ui-kit/inputs/input.scss";
+@import "./find-room-page/find-room-page.scss";
+@import "./ui-kit/pagination/pagination.scss";
+@import "./ui-kit/bage/bage.scss";
+@import "./ui-kit/feedback-block/feedback-block.scss";
+@import "./ui-kit/bullet-list/bullet-list.scss";
+@import "./ui-kit/booking-block/booking-block.scss";
+@import "./room-page/room-page.scss";
+@import "./login-page/login-page.scss";
+@import "./ui-kit/login-card/login-card.scss";
+@import "./ui-kit/registration-card/registration-card.scss";
+@import "./registration-page/registration-page.scss";
 
 body {
   font-size: 14px;
+  margin: 0;
   font-family: "Montserrat", sans-serif;
   font-weight: normal;
   line-height: 24px;
   color: $dark-shade-75;
+}
+.container {
+  max-width: 1120px;
+  margin: auto;
+}
+.find-room-block-wrapper {
+  position: relative;
+  background: url("../src/assets/img/image-bg.jpg") no-repeat;
+  background-size: cover;
+  height: 830px;
+  padding-top: 70px;
+  &__text {
+    position: absolute;
+    bottom: 18px;
+    right: 140px;
+    width: 297px;
+    text-align: right;
+  }
+  .dropdown-count__placeholder {
+    width: 320px;
+  }
 }

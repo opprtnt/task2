@@ -1,6 +1,4 @@
 
-
-
 export default function slider(e) {
   if (!(e.target.classList.contains('slider__prev-arrow-icon') || e.target.classList.contains('slider__next-arrow-icon'))) return;
 
@@ -11,7 +9,6 @@ export default function slider(e) {
   for (let i = 0; i < slides.length; i++) {
     if (dots[i].classList.contains('slider__dot_active')) slideIndex = i + 1;
   }
-  console.log(e.target.classList)
 
   if (e.target.classList.contains('slider__prev-arrow-icon')) prevSlide();
   if (e.target.classList.contains('slider__next-arrow-icon')) nextSlide()
@@ -42,7 +39,6 @@ export default function slider(e) {
   }
 
   function nextSlide() {
-    console.log('ff');
     slideIndex += 1;
     showSlide();
   }

@@ -1,9 +1,23 @@
 doctype html
-html(lang='en')
+html(lang="en")
   head
-    title Ui
     meta(charset="UTF-8")
+    meta(http-equiv="X-UA-Compatible", content="IE=edge")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    link(href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet")
+    title Toxin
   body
-  include ui-kit/cards.pug
-  include ui-kit/ui.pug
+    include ui-kit/buttons/buttons.pug  
+    include ui-kit/header/header/header.pug
+    include ui-kit/inputs/input.pug
+    .find-room-block-wrapper
+      .container
+        include ui-kit/find-room-block/find-room-block.pug
+        p.find-room-block-wrapper__text Лучшие номера для вашей работы, отдыха и просто вдохновения
+    include room-page/room-page.pug
+    include login-page/login-page.pug
+    include ui-kit/footer/footer.pug
+    include find-room-page/find-room-page.pug
+    include ui-kit/slider/slider.pug
+    include ui-kit/ui.pug
   

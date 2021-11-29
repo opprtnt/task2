@@ -1,3 +1,12 @@
+mixin text-input-email
+  input.text-input(type="text" placeholder="Email") 
+
+mixin text-input-password 
+  input.text-input(type="password" placeholder="Пароль")
+  
+mixin text-input(val,placeholder)
+  input.text-input(type= val placeholder= placeholder)
+  
 mixin date-picker(value)
   .datepicker-from
       h3= value 

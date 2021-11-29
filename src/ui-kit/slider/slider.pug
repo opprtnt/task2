@@ -1,19 +1,19 @@
 .room-card 
   .room-card__slider.slider
     .slider__slides
-      img.slider__slide(src=require("../../assets/img/image.jpg"), alt="")
-      img.slider__slide(src=require("../../assets/img/image.jpg"), alt="")
-      img.slider__slide(src=require("../../assets/img/image.jpg"), alt="")
-      img.slider__slide(src=require("../../assets/img/image.jpg"), alt="" )
+      //- img.slider__slide(src=require("../../assets/img/image.jpg"), alt="")
+      //- img.slider__slide(src=require("../../assets/img/image.jpg"), alt="")
+      //- img.slider__slide(src=require("../../assets/img/image.jpg"), alt="")
+      //- img.slider__slide(src=require("../../assets/img/image.jpg"), alt="" )
     .slider__next-arrow 
       a.material-icons.slider__next-arrow-icon expand_more
     .slider__prev-arrow
       a.material-icons.slider__prev-arrow-icon expand_more
     .slider__dots 
-     .slider__dot.slider__dot_active 
-     .slider__dot 
-     .slider__dot 
-     .slider__dot 
+      .slider__dot.slider__dot_active 
+      .slider__dot 
+      .slider__dot 
+      .slider__dot 
   .room-card__body 
     .room-card__info 
       .room-card__room № 
@@ -23,12 +23,7 @@
         strong 9 990₽ 
         | в сутки
     .room-card__rate   
-      .rate-button
-        .rate-button__star.material-icons(data-checked='false' value='1') star_border
-        .rate-button__star.material-icons(data-checked='false' value='2') star_border
-        .rate-button__star.material-icons(data-checked='false' value='3') star_border
-        .rate-button__star.material-icons(data-checked='false' value='4') star_border
-        .rate-button__star.material-icons(data-checked='false' value='5') star_border
+      +rate-button(4)
       .room-card__feedback
         strong 145 
         | Отзывов

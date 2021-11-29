@@ -15,8 +15,8 @@ mixin btn_primary-border-opacity5(value)
 mixin btn-link(value)
      a.btn-link= value
 
-mixin btn-enter(value)
-     a.btn.btn-enter= value
+mixin btn-enter(value, link)
+     a(href= link).btn.btn-enter= value
           span.material-icons arrow_forward
 
 mixin radio-button(value, name, checked) 
@@ -37,7 +37,7 @@ mixin like-button(value)
           span.like-button__count-like= value
 
 mixin rate-button(value)
-     - var count = value;
+     - var count= value;
      .rate-button
           - for(let i = 0; i<5; i++)
                if (i<count) 
