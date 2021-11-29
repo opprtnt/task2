@@ -1,0 +1,9 @@
+mixin feedback(title, subtitle, text, like)
+  .comment
+    .comment__image-block 
+      img.comment__photo(src="", alt="")
+      +like-button(like)
+    .comment__body 
+      .comment__title= title
+      .comment__subtitle= subtitle
+      p.comment__text= text

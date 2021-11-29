@@ -1,0 +1,28 @@
+.comment {
+  display: flex;
+  margin-bottom: 22px;
+  &:nth-last-child(1) {
+    margin-bottom: 0;
+  }
+  &__image-block {
+    margin-right: 10px;
+  }
+  &__photo {
+    height: 48px;
+    width: 48px;
+    margin: 0 auto 10px;
+    background-color: $dark-shade-25;
+    border: 2px solid #ffffff;
+    filter: drop-shadow(0px 10px 20px rgba(31, 32, 65, 0.1));
+    border-radius: 32px;
+  }
+  &__title {
+    font-weight: bold;
+  }
+  &__text {
+    margin: 10px 0 0;
+  }
+  .like-button {
+    margin: auto;
+  }
+}

@@ -1,0 +1,17 @@
+form.registration-form 
+  h1 Регистрация аккаунта
+  +text-input('text', 'Имя') 
+  +text-input('text', 'Фамилия')
+  +radio-button('Мужчина', 'sex', 'checked')
+  +radio-button('Женщина', 'sex')
+  h3 Дата рождения
+    +masked-text-field
+  .registration-form__data-login
+    h3 данные для входа в сервис
+    +text-input-email  
+    +text-input-password  
+    +toggle-button('Получать спецпредложения', 'getOffers', 'checked')
+  +btn-enter('Перейти к оплате')
+  .registration-form__login 
+    span Уже есть аккаунт на Toxin
+    +btn_primary-border('Войти')

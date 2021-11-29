@@ -1,0 +1,16 @@
+.login-block {
+  @include block-style;
+  width: 380px;
+  .btn.btn-enter {
+    margin: 10px 0 30px;
+  }
+  &__create-account-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    span {
+      color: black;
+    }
+  }
+}
