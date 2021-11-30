@@ -1,4 +1,5 @@
 
+
 export default function slider(e) {
   if (!(e.target.classList.contains('slider__prev-arrow-icon') || e.target.classList.contains('slider__next-arrow-icon'))) return;
 

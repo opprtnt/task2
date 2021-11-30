@@ -4,7 +4,7 @@
     width: 100%;
   }
 }
-.container {
+.find-room-page__container {
   display: flex;
   padding-top: 30px;
   margin-bottom: 70px;
@@ -16,9 +16,11 @@
 .find-rooms-list {
   &__cards {
     display: flex;
-    flex: 0 0 32%;
     flex-wrap: wrap;
     justify-content: space-between;
+    .room-card {
+      width: 32%;
+    }
   }
   .pagination {
     margin: 41px auto;

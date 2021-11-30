@@ -9,7 +9,7 @@ html(lang="en")
     include ../ui-kit/header/header/header.pug
     .room-page
       .room-page__img-block
-        img(src=require('./assets/img/image1.jpg'))
+        img.room-page__main-img(src=require('./assets/img/image1.jpg'))
         .room-page__img-side
           img(src=require('./assets/img/image2.jpg'))
           img(src=require('./assets/img/image3.jpg'))
@@ -60,8 +60,9 @@ html(lang="en")
             .room-page__cancel-info
               h3 Отмена
               p.room-page__cansel-info-text Бесплатная отмена в течение 48 ч. После этого при отмене не позднее чем за 5 дн. до 
-              | прибытия вы получите полный возврат за вычетом сбора за услуги.
+                | прибытия вы получите полный возврат за вычетом сбора за услуги.
         .room-page__reservation-card
           include ../ui-kit/booking-block/booking-block.pug
+    include ../ui-kit/footer/footer.pug
 
       

@@ -14,13 +14,14 @@ module.exports = {
   context: path.resolve(__dirname, 'src'),
   mode: 'development',
   entry: {
-    main: './index.js',
+    "main": './index.js',
   },
 
   output: {
     filename: `${filename('js')}`,
     path: path.resolve(__dirname, 'dist'),
-    clean: true
+    clean: true,
+    assetModuleFilename: 'static/[hash][ext][query]'
   },
   devServer: {
     historyApiFallback: true,
@@ -32,7 +33,12 @@ module.exports = {
   plugins: [
     new HTMLWebpackPlugin({
       template: './index.pug',
-      inject: true
+      inject: true,
+      chunks: ['main']
+    }),
+    new HTMLWebpackPlugin({
+      template: './find-room-page/find-room-page.pug',
+      filename: 'static/find-room-page.html',
     }),
     new MiniCssExtractPlugin({ filename: `${filename('css')}` }),
     new webpack.ProvidePlugin({
@@ -45,25 +51,40 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.css$/,
-        use: [MiniCssExtractPlugin.loader, "css-loader"],
-      },
-      {
         test: /\.pug$/,
-        use: ['pug-loader']
+        use: ['pug-loader'],
+
+      },
+
+      {
+        test: /\.(s[ac]ss|css)$/,
+        use: [MiniCssExtractPlugin.loader, "css-loader", 'sass-loader', "postcss-loader"],
       },
       {
-        test: /\.s[ac]ss$/,
-        use: [MiniCssExtractPlugin.loader, "css-loader", 'sass-loader'],
+        test: /\.(png|jpe?g|gif|svg)$/,
+        type: 'asset/resource',
+        generator: {
+          filename: 'image/[hash][ext][query]'
+        }
+
       },
       {
-        test: /\.(ttf|woff|woff2|eot|svg)$/,
-        use: ['file-loader']
+        test: /\.m?js$/,
+        loader: 'babel-loader',
+        exclude: /(node_modules|bower_components)/,
+        options: {
+          presets: ['@babel/preset-env']
+        }
       },
       {
-        test: /\.(jpg|png)$/,
-        use: ['file-loader']
+        test: /\.(woff|woff2|eot|ttf|otf)$/i,
+        type: 'asset/resource',
+        generator: {
+          filename: 'fonts/[hash][ext][query]',
+        }
       }
+
+
     ]
   }
 };

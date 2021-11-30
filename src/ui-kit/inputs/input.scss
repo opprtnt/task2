@@ -70,53 +70,11 @@
     margin-right: 0;
   }
 }
-.range-slider {
-  margin-bottom: 30px;
-  &__wrapper {
-    display: flex;
-    justify-content: space-between;
-    width: 266px;
-    margin-bottom: 20px;
-  }
-  &__value {
-    display: inline-block;
-    text-align: right;
-    font-size: 12px;
-    line-height: 15px;
-    border: none;
-    color: $dark-shade-50;
-  }
-  h3 {
-    display: inline !important;
-    margin: 0;
-  }
-}
+
 .find-room-filter__range-slider-text {
   font-size: 12px;
   line-height: 14px;
   color: $dark-shade-50;
-}
-
-#slider-range {
-  width: 266px;
-  height: 6px;
-  margin-bottom: 13.56px;
-  border: 1px solid $dark-shade-25;
-  border-radius: 3px;
-  .ui-slider-handle {
-    width: 16px !important;
-    height: 16px !important;
-    top: -6px;
-  }
-  .ui-state-default {
-    background: linear-gradient(180deg, #6fcf97 0%, #66d2ea 100%);
-    border: 2px solid #ffffff;
-    border-radius: 10px;
-  }
-  .ui-widget-header {
-    background: linear-gradient(180deg, #6fcf97 0%, #66d2ea 100%);
-    border-radius: 3px;
-  }
 }
 
 .form-checkbox {
@@ -192,7 +150,7 @@
     padding-left: 15px;
     width: 100%;
     line-height: 18px;
-    border: 1px solid $dark-shade-50;
+    border: 1px solid $dark-shade-25;
     border-top-left-radius: 2px;
     border-top-right-radius: 2px;
     display: inline-flex;
@@ -215,7 +173,7 @@
     padding-left: 15px;
     width: 320px;
     line-height: 18px;
-    border: 1px solid $dark-shade-50;
+    border: 1px solid $dark-shade-25;
     border-top-left-radius: 2px;
     border-top-right-radius: 2px;
     display: inline-flex;

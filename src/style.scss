@@ -1,7 +1,6 @@
 @import "./css/fonts.css";
 @import "../node_modules/normalize.css/normalize.css";
 @import "ui-kit/ui.scss";
-@import "ui-kit/logo.scss";
 @import "ui-kit/header/header/header.scss";
 @import "ui-kit/header/header-login/header-login.scss";
 @import "ui-kit/footer/footer.scss";
@@ -21,7 +20,7 @@
 @import "./ui-kit/login-card/login-card.scss";
 @import "./ui-kit/registration-card/registration-card.scss";
 @import "./registration-page/registration-page.scss";
-
+@import "./ui-kit/range-slider/range-slider.scss";
 body {
   font-size: 14px;
   margin: 0;
@@ -29,6 +28,39 @@ body {
   font-weight: normal;
   line-height: 24px;
   color: $dark-shade-75;
+}
+* {
+  box-sizing: border-box;
+}
+a {
+  cursor: pointer;
+}
+img {
+  display: block;
+}
+button {
+  cursor: pointer;
+  text-transform: uppercase;
+}
+
+h1 {
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 29px;
+  margin: 0 0 20px 0;
+}
+h2 {
+  font-weight: bold;
+  font-size: 19px;
+  line-height: 23px;
+}
+h3 {
+  margin: 0;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 15px;
+  text-transform: uppercase;
+  color: $dark-shade-100;
 }
 .container {
   max-width: 1120px;

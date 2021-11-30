@@ -1,6 +1,6 @@
 function createCalendar(elem, year, month) {
 
-  let mon = month - 1; // месяцы в JS идут от 0 до 11, а не от 1 до 12
+  let mon = +month - 1; // месяцы в JS идут от 0 до 11, а не от 1 до 12
   let d = new Date(year, mon);
 
   let table = '<table><tr class="calendar__table-days"><th>Пн</th><th>Вт</th><th>Ср</th><th>Чт</th><th>Пт</th><th>Сб</th><th>Вс</th></tr><tr>';
@@ -50,7 +50,7 @@ function getDay(date) { // получить номер дня недели, от
 
 const calendar = document.querySelector('.calendar__table');
 
-createCalendar(calendar, 2019, 08);
+createCalendar(calendar, 2019, '08');
 
 $('.calendar__table').on('click', function (e) {
   if (e.target.tagName !== 'TD') return;
